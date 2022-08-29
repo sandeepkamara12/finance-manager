@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html, body {
+max-width: 414px;
+margin-left: auto;
+margin-right: auto;
+font-family: 'NexaRegular';
+font-weight: normal;
+}
+@font-face {
+    font-family: 'Nexa';
+    src: url('assets/fonts/Nexa/Nexa-Bold.eot');
+    src: url('assets/fonts/Nexa/Nexa-Bold.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/Nexa/Nexa-Bold.woff2') format('woff2'),
+        url('assets/fonts/Nexa/Nexa-Bold.woff') format('woff'),
+        url('assets/fonts/Nexa/Nexa-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: url('assets/fonts/Nexa/Nexa-Light.eot');
+    src: url('assets/fonts/Nexa/Nexa-Light.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/Nexa/Nexa-Light.woff2') format('woff2'),
+        url('assets/fonts/Nexa/Nexa-Light.woff') format('woff'),
+        url('assets/fonts/Nexa/Nexa-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NexaRegular';
+    src: url('assets/fonts/Nexa/NexaRegular.eot');
+    src: url('assets/fonts/Nexa/NexaRegular.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/Nexa/NexaRegular.woff2') format('woff2'),
+        url('assets/fonts/Nexa/NexaRegular.woff') format('woff'),
+        url('assets/fonts/Nexa/NexaRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
