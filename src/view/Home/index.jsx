@@ -10,7 +10,7 @@ export default function Home() {
          <div className="mx-auto h-screen relative">
             <div className="text-white">
                <div className='p-5'>
-                  <div className="dashboard-header fixed top-0 left-0 right-0 p-5">
+                  <div className="dashboard-header fixed top-0 left-0 right-0 p-5 bg-transaction-top bg-no-repeat">
                      <h4 className='flex items-center justify-between relative pb-5'>
                         <FontAwesomeIcon icon={faAngleLeft} className="w-10" size="lg" />Aug 2022<FontAwesomeIcon icon={faAngleRight} className="w-10" size="lg" />
                      </h4>
