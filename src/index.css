@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 html, body {
-max-width: 414px;
-margin-left: auto;
-margin-right: auto;
-font-family: 'NexaRegular';
+/* max-width: 414px; */
+/* margin-left: auto;
+margin-right: auto; */
+/* font-family: 'NexaRegular'; */
 font-weight: normal;
 }
 @font-face {

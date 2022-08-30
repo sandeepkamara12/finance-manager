@@ -1,6 +1,44 @@
 #root {
-  max-width: 1280px;
+  max-width: 414px;
   margin: 0 auto;
-  /* padding: 2rem; */
-  /* text-align: center; */
+  /* font-family: 'Inter', sans-serif; */
+}
+.custom-btn {
+  padding: 11px 45px;
+}
+.footer {
+  max-width: 414px;
+  margin: 0 auto;
+  height: 80px;
+  box-shadow: 0 -2px 2.5px rgb(0 0 0 / 4%);
+}
+
+/* Transactions Listing Css */
+.expense-listing .expense-list-wrap li {
+  border-top: 1px solid #E2E2F6;
+  font-size: 17px;
+  line-height: 20px;
+  padding: 18px 25px;
+}
+.expense-listing .expense-list-wrap li .expense-perentage {
+  font-size: 15px;
+  line-height: 18px;
+  width: 60px;
+  height: 30px;
+  border-radius: 4px;
+}
+.expense-category-other {
+  background-color: #989CF2;
+}
+.expense-category-diesel {
+  background-color: #9019B8;
+}
+.expense-category-vedik {
+  background-color: #CA2091;
+}
+.expense-category-car-maintenance {
+  background-color: #6B14D1;
+}
+.expense-header {
+  padding: 28px;
 }
