@@ -15,6 +15,10 @@ const routes = [
       component: <NotFound />,
    },
    {
+      path: "/splash",
+      component: <Splash />,
+   },
+   {
       path: "/transactions",
       component: <Transactions />,
    },
