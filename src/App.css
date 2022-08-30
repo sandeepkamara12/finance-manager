@@ -1,7 +1,6 @@
 #root {
   max-width: 414px;
   margin: 0 auto;
-  /* font-family: 'Inter', sans-serif; */
 }
 .custom-btn {
   padding: 11px 45px;
@@ -17,9 +16,6 @@
   /* box-shadow: 0 -2px 2.5px rgb(0 0 0 / 4%); */
 }
 
-/* .dashboard-header {
-  background: url('./assets/images/purple-bg.png') no-repeat center center;
-} */
 .expense-listing-wrap {
   padding-top: 365px;
   padding-bottom: 105px;
