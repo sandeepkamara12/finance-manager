@@ -12,13 +12,13 @@ export default function Login() {
             <h3 className="py-4 text-pink text-18 leading-24 font-semibold">Finance <span className="text-purple">Manager</span></h3>
             <h2 className="text-18 leading-28 font-semibold">Seamlessly manage your Finances</h2>
             <p className="pt-3 pb-6 text-14 leading-24 text-textColor">Discover the revolutionary semi automated financial management experience.</p>
-            <div className=''>
-               <Link to='/home' className='flex items-center py-3 px-6 bg-white rounded-full font-semibold text-13 leading-20 mb-4'>
+            <div className='w-full'>
+               <Link to='/home' className='flex items-center py-3 px-6 bg-white rounded-full font-semibold text-13 leading-20 mb-4 w-3/5 mx-auto'>
                   <img src={Google} className='mr-2' />Continue with Google
                </Link>
             </div>
 
-            <img src={FinanceManager} className='mx-auto h-80' />
+            <img src={FinanceManager} className='mx-auto h-64' />
          </div>
       </div>
    );
