@@ -15,17 +15,34 @@
   height: 125px;
   /* box-shadow: 0 -2px 2.5px rgb(0 0 0 / 4%); */
 }
+.footer .footer-tab.active:not(.user-tab) svg path {
+  fill: #6b14d1;
+}
+.footer .footer-tab.active.user-tab svg path {
+  stroke: #6b14d1;
+}
 
 .expense-listing-wrap {
   padding-top: 365px;
   padding-bottom: 105px;
 }
+
+.category-wrap .category:nth-child(odd) {
+  padding-right: 0.75rem;
+}
+.category-wrap .category:nth-child(even) {
+  padding-left: 0.75rem;
+}
+.category-wrap .category > div {
+  min-height: 86px;
+}
+
 /* Transactions Listing Css */
 .expense-listing .expense-list-wrap li {
   border-top: 1px solid #E2E2F6;
   font-size: 17px;
   line-height: 20px;
-  padding: 18px 25px;
+  padding: 18px 20px;
 }
 .expense-listing .expense-list-wrap li .expense-perentage {
   font-size: 15px;

@@ -8,6 +8,8 @@ module.exports = {
         'login': "conic-gradient(from 178.25deg at -3.99% 9.49%, #FBE0F0 0deg, #DBD2FC 118.4deg, #D9DFFD 152.38deg, #DEDFFF 360deg)",
         'transaction-top': "url('/src/assets/images/purple-bg.png')",
         'total-balancebg': "linear-gradient(90deg, #CC208E 0%, #6713D2 100%);",
+        'profile-gradient': "linear-gradient(90deg, #F093FB 0%, #F5576C 100%);",
+        'income-gradient': "linear-gradient(90deg, #CC208E 0%, #6713D2 100%);",
       }
     },
     colors: {
@@ -41,6 +43,7 @@ module.exports = {
       textColor: '#666666',
       border: '#E2E2F6',
       red: '#F95B51',
+      formLabel: '#8C8C8C',
     },
     fontSize: {
       "12": ["12px"],
@@ -59,6 +62,7 @@ module.exports = {
       "36": ["36px"],
     },
     lineHeight: {
+      45: "45px",
       40: "40px",
       36: "36px",
       30: "30px",
@@ -74,6 +78,7 @@ module.exports = {
     borderRadius: {
       xs: "4px",
       sm: "5px",
+      lg: "15px",
       xl: "20px",
       full: "9999px",
       none: "0",
