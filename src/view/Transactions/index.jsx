@@ -7,34 +7,36 @@ import { useState } from 'react';
 export default function Transactions() {
 
    const customStyles = {
-      // option: (provided, state) => ({
-      //    ...provided,
-      //    borderBottom: '1px dotted pink',
-      //    color: state.isSelected ? 'red' : 'blue',
-      //    padding: 20,
-      // }),
-      // control: () => ({
-      //    width: 200,
-      //    border: '1px solid #ccccccc',
-      // }),
       menu: () => ({
-         width: 180,
+         width: 150,
+         display: 'block',
+         position: 'absolute',
+         backgroundColor: '#ffffff',
+      }),
+      option: () => ({
+         fontSize: 14,
+         fontFamily: 'Inter, sans-serif',
+         padding: '5px 10px',
+         '&:hover': { backgroundColor: '#6B14D1', color: '#ffffff' }
+      }),
+      indicatorSeparator: () => ({
+         display: "none",
+      }),
+      dropdownIndicator: () => ({
+         color: '#000000',
+         right: 8,
+         position: 'absolute'
       })
-      // singleValue: (provided, state) => {
-      //    const opacity = state.isDisabled ? 0.5 : 1;
-      //    const transition = 'opacity 300ms';
-
-      //    return { ...provided, opacity, transition };
-      // }
    }
 
    const data = [
-      { value: 'cash', label: 'Cash' },
-      { value: 'debit-card', label: 'Debit Card' },
-      { value: 'credit-card', label: 'Credit Card' }
+      { value: 'day', label: 'Day' },
+      { value: 'week', label: 'Week' },
+      { value: 'monthly', label: 'Monthly' },
+      { value: 'annually', label: 'Annually' }
    ];
 
-   const [selectedValue, setSelectedValue] = useState(3);
+   const [selectedValue, setSelectedValue] = useState("day");
 
    const handleChange = e => {
       setSelectedValue(e.value);
@@ -43,15 +45,27 @@ export default function Transactions() {
    return (
       <Layout>
          <div className="h-screen bg-white py-5">
-            <div className="top-area-wrap flex flex-wrap items-center justify-center">
-               <h4 className='flex items-center justify-between relative pb-5 w-1/2'>
-                  <FontAwesomeIcon icon={faAngleLeft} className="w-10" size="lg" />Aug 2022<FontAwesomeIcon icon={faAngleRight} className="w-10" size="lg" />
-               </h4>
-               <div className='flex items-center justify-between relative pb-5 w-1/2'>
-                  <Select styles={customStyles} options={data} onChange={handleChange} value={data.filter(obj => obj.value === selectedValue)} name="paymentType" id="paymentType" className='text-16 leading-20 text-black font-medium py-3 px-2 w-full' />
+            <div className="dashboard-header fixed top-0 left-0 right-0 px-5 pt-5 bg-white border-b border-border">
+               <div className="flex flex-wrap items-center justify-between">
+                  <h4 className='flex items-center justify-between relative w-2/5'>
+                     <FontAwesomeIcon icon={faAngleLeft} size="lg" />Aug 2022<FontAwesomeIcon icon={faAngleRight} size="lg" />
+                  </h4>
+                  <div className='flex items-center justify-between relative w-2/5'>
+                     <Select value={data.filter(obj => obj.value === selectedValue)} styles={customStyles} onChange={handleChange} options={data} name="paymentType" id="paymentType" className='text-16 leading-20 text-black font-medium w-full' />
+                  </div>
+               </div>
+               <div className="meta-info flex flex-wrap items-center justify-between mt-4">
+                  <div className="meta w-1/2 text-center pb-2">
+                     <span className="block text-18 leading-28 font-medium text-tabColor">Income</span>
+                     <span className="amount text-20 leading-24 font-medium block text-tabColor">₹ 90,000</span>
+                  </div>
+                  <div className="meta w-1/2 text-center border-b border-pink pb-2">
+                     <span className="block text-18 leading-28 font-bold text-pink">Expense</span>
+                     <span className="amount text-20 leading-24 font-bold block text-pink">₹ 82,632.00</span>
+                  </div>
                </div>
             </div>
-            <div className="expense-listing">
+            <div className="expense-listing pt-36">
                <ul className="expense-list-wrap">
                   <li className="flex flex-wrap items-center justify-between">
                      <span className="expense-left-wrap w-4/6">

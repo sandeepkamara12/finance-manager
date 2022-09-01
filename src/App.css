@@ -1,16 +1,16 @@
 #root {
-  max-width: 414px;
+  max-width: 25.875rem;
   margin: 0 auto;
 }
 .custom-btn {
   padding: 11px 45px;
 }
 .dashboard-header {
-  max-width: 414px;
+  max-width: 25.875rem;
   margin: auto;
 }
 .footer {
-  max-width: 414px;
+  max-width: 25.875rem;
   margin: 0 auto;
   height: 125px;
   /* box-shadow: 0 -2px 2.5px rgb(0 0 0 / 4%); */
@@ -23,7 +23,7 @@
 }
 
 .expense-listing-wrap {
-  padding-top: 365px;
+  padding-top: 10rem;
   padding-bottom: 105px;
 }
 
