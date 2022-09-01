@@ -7,16 +7,18 @@ export default function Login() {
       <div className="p-5 bg-login h-screen text-center overflow-y-auto flex flex-wrap items-center justify-center">
          <div className='top-area flex justify-center flex-wrap flex-column items-center'>
             <div className='w-full'>
-               <img src={SplashIcon} className="m-auto" />
+               <img src={SplashIcon} className="m-auto h-full" />
             </div>
-            <h3 className="pt-4 pb-10 text-pink text-22 leading-24 font-semibold">Finance <span className="text-purple">Manager</span></h3>
-            <h2 className="text-28 leading-40 font-semibold">Seamlessly manage your Finances</h2>
-            <p className="pt-3 pb-6 text-18 leading-30 text-textColor">Discover the revolutionary semi automated financial management experience.</p>
-            <Link to='/home' className='inline-flex items-center py-3 px-6 bg-white rounded-full font-semibold text-13 leading-20 mb-4'>
-               <img src={Google} className='mr-2' />Continue with Google
-            </Link>
+            <h3 className="pt-4 pb-6 text-pink text-22 leading-24 font-semibold">Finance <span className="text-purple">Manager</span></h3>
+            <h2 className="text-20 leading-32 font-semibold">Seamlessly manage your Finances</h2>
+            <p className="pt-3 pb-6 text-16 leading-28 text-textColor">Discover the revolutionary semi automated financial management experience.</p>
+            <div className=''>
+               <Link to='/home' className='flex items-center py-3 px-6 bg-white rounded-full font-semibold text-13 leading-20 mb-4'>
+                  <img src={Google} className='mr-2' />Continue with Google
+               </Link>
+            </div>
 
-            <img src={FinanceManager} className='mx-auto' />
+            <img src={FinanceManager} className='mx-auto h-80' />
          </div>
       </div>
    );

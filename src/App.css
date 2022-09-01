@@ -21,6 +21,11 @@
 .footer .footer-tab.active.user-tab svg path {
   stroke: #6b14d1;
 }
+input[type="date"] {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  background: transparent;
+}
 
 .expense-listing-wrap {
   padding-top: 10rem;
