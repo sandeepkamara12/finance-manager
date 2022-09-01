@@ -55,16 +55,16 @@ export default function Home() {
                   </div>
                   <div className="meta-info flex flex-wrap items-center justify-between mt-4">
                      <div className="meta">
-                        <span className="block text-16 leading-20 font-normal">Income</span>
-                        <span className="amount text-20 leading-24 font-bold pt-2 block">₹ 80,000</span>
+                        <span className="block text-14 leading-18 font-normal text-pink">Income</span>
+                        <span className="amount text-18 leading-20 font-bold pt-1 block text-pink">₹ 80,000</span>
                      </div>
                      <div className="meta">
-                        <span className="block text-16 leading-20 font-normal">Expense</span>
-                        <span className="amount text-20 leading-24 font-bold pt-2 block">₹ 25,000</span>
+                        <span className="block text-14 leading-18 font-normal text-purple">Expense</span>
+                        <span className="amount text-18 leading-20 font-bold pt-1 block text-purple">₹ 25,000</span>
                      </div>
                      <div className="meta">
-                        <span className="block text-16 leading-20 font-normal">Total Balance</span>
-                        <span className="amount text-20 leading-24 font-bold pt-2 block">₹ 55,000</span>
+                        <span className="block text-14 leading-18 font-normal text-textColor">Total Balance</span>
+                        <span className="amount text-18 leading-20 font-bold pt-1 block text-textColor">₹ 55,000</span>
                      </div>
                   </div>
                </div>
