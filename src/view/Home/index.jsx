@@ -69,8 +69,7 @@ export default function Home() {
                   </div>
                </div>
 
-               <div className='expense-listing-wrap'>
-
+               <div className='expense-listing-wrap px-5'>
                   <div className="datewise-expense">
                      <h3 className='flex flex-wrap justify-between py-3 items-center'>
                         <span className='text-18 text-black leading-22 font-semibold tracking-tight'>Monday, 22 August</span>

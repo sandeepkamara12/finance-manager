@@ -12,7 +12,7 @@ const CategoryListing = () => {
                   <div className="expense-header border-b border-border">
                      <h1 className='uppercase font-semibold text-pink text-20 leading-24 flex flex-wrap items-center justify-between'>
                         <span>expense category</span>
-                        <span className="add-category bg-income-gradient rounded-full text-white w-6 h-6 flex flex-wrap items-center justify-center font-normal"><NavLink to="/add-category">+</NavLink></span>
+                        <NavLink to="/add-category" className="flex flex-wrap items-center justify-center add-category bg-income-gradient rounded-full text-white w-6 h-6 font-normal">+</NavLink>
                      </h1>
                   </div>
                </div>

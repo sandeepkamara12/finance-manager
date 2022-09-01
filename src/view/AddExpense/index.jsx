@@ -62,7 +62,7 @@ export default function AddExpense() {
                         type="date"
                         onChange={formik.handleChange}
                         value={formik.values.date}
-                        className="fields text-16 leading-20 text-black font-medium border-b border-border py-3 px-2 w-4/6"
+                        className="fields text-16 leading-20 text-black font-medium border-b border-border py-3 px-2 w-4/6 bg-transparent"
                      />
                   </div>
                   <div className="field-wrap mb-3 flex flex-wrap items-center">
