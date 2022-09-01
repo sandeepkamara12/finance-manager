@@ -7,11 +7,11 @@ export default function Login() {
       <div className="p-5 bg-login h-screen text-center overflow-y-auto flex flex-wrap items-center justify-center">
          <div className='top-area flex justify-center flex-wrap flex-column items-center'>
             <div className='w-full'>
-               <img src={SplashIcon} className="m-auto h-full" />
+               <img src={SplashIcon} className="m-auto h-20" />
             </div>
-            <h3 className="pt-4 pb-6 text-pink text-22 leading-24 font-semibold">Finance <span className="text-purple">Manager</span></h3>
-            <h2 className="text-20 leading-32 font-semibold">Seamlessly manage your Finances</h2>
-            <p className="pt-3 pb-6 text-16 leading-28 text-textColor">Discover the revolutionary semi automated financial management experience.</p>
+            <h3 className="py-4 text-pink text-18 leading-24 font-semibold">Finance <span className="text-purple">Manager</span></h3>
+            <h2 className="text-18 leading-28 font-semibold">Seamlessly manage your Finances</h2>
+            <p className="pt-3 pb-6 text-14 leading-24 text-textColor">Discover the revolutionary semi automated financial management experience.</p>
             <div className=''>
                <Link to='/home' className='flex items-center py-3 px-6 bg-white rounded-full font-semibold text-13 leading-20 mb-4'>
                   <img src={Google} className='mr-2' />Continue with Google
