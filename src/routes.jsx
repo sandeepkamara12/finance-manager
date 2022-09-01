@@ -11,15 +11,15 @@ import CategoryListing from './view/CategoryListing';
 const routes = [
    {
       path: "/",
-      component: <Home />,
+      component: <Splash />,
    },
    {
       path: "/not-found",
       component: <NotFound />,
    },
    {
-      path: "/splash",
-      component: <Splash />,
+      path: "/home",
+      component: <Home />,
    },
    {
       path: "/transactions",

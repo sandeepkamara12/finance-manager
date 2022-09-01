@@ -12,7 +12,7 @@ export default function Login() {
             <h3 className="pt-4 pb-10 text-pink text-22 leading-24 font-semibold">Finance <span className="text-purple">Manager</span></h3>
             <h2 className="text-28 leading-40 font-semibold">Seamlessly manage your Finances</h2>
             <p className="pt-3 pb-6 text-18 leading-30 text-textColor">Discover the revolutionary semi automated financial management experience.</p>
-            <Link to='/' className='inline-flex items-center py-3 px-6 bg-white rounded-full font-semibold text-13 leading-20 mb-4'>
+            <Link to='/home' className='inline-flex items-center py-3 px-6 bg-white rounded-full font-semibold text-13 leading-20 mb-4'>
                <img src={Google} className='mr-2' />Continue with Google
             </Link>
 

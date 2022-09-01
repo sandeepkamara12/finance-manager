@@ -6,8 +6,8 @@ const Footer = () => {
 
    return (
       <div className="footer fixed left-0 right-0 bottom-0 bg-white flex items-end justify-between pb-5">
-         <div className={`footer-tab w-1/5 flex items-center justify-center  ${location.pathname === "/" && "active"}`}>
-            <Link to="/" >
+         <div className={`footer-tab w-1/5 flex items-center justify-center  ${location.pathname === "/home" && "active"}`}>
+            <Link to="/home" >
                <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M19.5 30.0975V22.5975C19.5 21.404 19.0259 20.2594 18.182 19.4155C17.3381 18.5716 16.1935 18.0975 15 18.0975C13.8065 18.0975 12.6619 18.5716 11.818 19.4155C10.9741 20.2594 10.5 21.404 10.5 22.5975V30.0975H3C2.20435 30.0975 1.44129 29.7814 0.87868 29.2188C0.316071 28.6562 1.38884e-10 27.8931 1.38884e-10 27.0975V10.7955C-4.98411e-06 10.2774 0.134146 9.76821 0.38939 9.31739C0.644633 8.86657 1.01227 8.48954 1.4565 8.223L13.4565 1.023C13.9227 0.743243 14.4563 0.595467 15 0.595467C15.5437 0.595467 16.0773 0.743243 16.5435 1.023L28.5435 8.223C28.9877 8.48954 29.3554 8.86657 29.6106 9.31739C29.8659 9.76821 30 10.2774 30 10.7955V27.0975C30 27.8931 29.6839 28.6562 29.1213 29.2188C28.5587 29.7814 27.7957 30.0975 27 30.0975H19.5Z" fill="#AAAAAA" />
                </svg>

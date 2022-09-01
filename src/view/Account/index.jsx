@@ -20,10 +20,12 @@ export default function Account() {
                   <div className="category w-1/2 flex flex-wrap items-center justify-center flex-column text-center pb-6">
                      <div className="bg-profile-gradient w-full rounded-lg py-3 flex flex-wrap items-center justify-center flex-column">
                         <figure className='w-full'>
-                           <img src={AccountProfile} alt="Profile" className='mx-auto' />
+                           <NavLink to="/home">
+                              <img src={AccountProfile} alt="Profile" className='mx-auto' />
+                           </NavLink>
                         </figure>
                         <div className="pt-2 w-full text-white text-16 leading-26">
-                           <NavLink to="/">
+                           <NavLink to="/home">
                               Profile
                            </NavLink>
                         </div>
@@ -40,7 +42,9 @@ export default function Account() {
                   <div className="category w-1/2 flex flex-wrap items-center justify-center flex-column text-center pb-6">
                      <div className="bg-profile-gradient w-full rounded-lg py-3 flex flex-wrap items-center justify-center flex-column">
                         <figure className='w-full'>
-                           <img src={AccountInExpense} alt="Profile" className='mx-auto' />
+                           <NavLink to="/category-listing">
+                              <img src={AccountInExpense} alt="Profile" className='mx-auto' />
+                           </NavLink>
                         </figure>
                         <div className="pt-2 w-full text-white text-16 leading-26">
                            <NavLink to="/category-listing">
@@ -69,6 +73,6 @@ export default function Account() {
 
             </div>
          </div>
-      </Layout>
+      </Layout >
    );
 }
