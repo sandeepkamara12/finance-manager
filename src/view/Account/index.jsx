@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 export default function Account() {
    return (
       <Layout>
-         <div className="h-screen bg-white">
+         <div className="h-screen bg-white adjust-scroll-spacing overflow-scroll">
             <div className="add-expense">
                <div className="expense-form">
                   <div className="expense-header border-b border-border">
@@ -18,7 +18,7 @@ export default function Account() {
 
                <div className="category-wrap my-8 flex items-center justify-center flex-wrap px-5">
                   <div className="category w-1/2 flex flex-wrap items-center justify-center flex-column text-center pb-6">
-                     <div className="bg-profile-gradient w-full rounded-lg py-3 flex flex-wrap items-center justify-center flex-column">
+                     <div className="bg-profile-gradient w-full rounded-lg py-3 flex flex-wrap items-center justify-center flex-column px-3">
                         <figure className='w-full'>
                            <NavLink to="/home">
                               <img src={AccountProfile} alt="Profile" className='mx-auto' />
@@ -32,7 +32,7 @@ export default function Account() {
                      </div>
                   </div>
                   <div className="category w-1/2 flex flex-wrap items-center justify-center flex-column text-center pb-6">
-                     <div className="bg-income-gradient w-full rounded-lg py-3 flex flex-wrap items-center justify-center flex-column">
+                     <div className="bg-income-gradient w-full rounded-lg py-3 flex flex-wrap items-center justify-center flex-column px-3">
                         <figure className='w-full'>
                            <img src={AccountInExpense} alt="Profile" className='mx-auto' />
                         </figure>
@@ -40,7 +40,7 @@ export default function Account() {
                      </div>
                   </div>
                   <div className="category w-1/2 flex flex-wrap items-center justify-center flex-column text-center pb-6">
-                     <div className="bg-profile-gradient w-full rounded-lg py-3 flex flex-wrap items-center justify-center flex-column">
+                     <div className="bg-profile-gradient w-full rounded-lg py-3 flex flex-wrap items-center justify-center flex-column px-3">
                         <figure className='w-full'>
                            <NavLink to="/category-listing">
                               <img src={AccountInExpense} alt="Profile" className='mx-auto' />
@@ -54,7 +54,7 @@ export default function Account() {
                      </div>
                   </div>
                   <div className="category w-1/2 flex flex-wrap items-center justify-center flex-column text-center pb-6">
-                     <div className="bg-income-gradient w-full rounded-lg py-3 flex flex-wrap items-center justify-center flex-column">
+                     <div className="bg-income-gradient w-full rounded-lg py-3 flex flex-wrap items-center justify-center flex-column px-3">
                         <figure className='w-full'>
                            <img src={Help} alt="Profile" className='mx-auto' />
                         </figure>
@@ -62,7 +62,7 @@ export default function Account() {
                      </div>
                   </div>
                   <div className="category w-1/2 flex flex-wrap items-center justify-center flex-column text-center pb-6">
-                     <div className="bg-income-gradient w-full rounded-lg py-3 flex flex-wrap items-center justify-center flex-column">
+                     <div className="bg-income-gradient w-full rounded-lg py-3 flex flex-wrap items-center justify-center flex-column px-3">
                         <figure className='w-full'>
                            <img src={Share} alt="Profile" className='mx-auto' />
                         </figure>

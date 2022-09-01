@@ -56,16 +56,16 @@ export default function Transactions() {
                </div>
                <div className="meta-info flex flex-wrap items-center justify-between mt-4">
                   <div className="meta w-1/2 text-center pb-2">
-                     <span className="block text-18 leading-28 font-medium text-tabColor">Income</span>
-                     <span className="amount text-20 leading-24 font-medium block text-tabColor">₹ 90,000</span>
+                     <span className="block text-16 leading-22 font-medium text-tabColor">Income</span>
+                     <span className="amount text-18 leading-24 font-medium block text-tabColor">₹ 90,000</span>
                   </div>
                   <div className="meta w-1/2 text-center border-b border-pink pb-2">
-                     <span className="block text-18 leading-28 font-bold text-pink">Expense</span>
-                     <span className="amount text-20 leading-24 font-bold block text-pink">₹ 82,632.00</span>
+                     <span className="block text-16 leading-22 font-bold text-pink">Expense</span>
+                     <span className="amount text-18 leading-24 font-bold block text-pink">₹ 82,632.00</span>
                   </div>
                </div>
             </div>
-            <div className="expense-listing pt-36">
+            <div className="expense-listing pt-36 adjust-scroll-spacing overflow-scroll">
                <ul className="expense-list-wrap">
                   <li className="flex flex-wrap items-center justify-between">
                      <span className="expense-left-wrap w-4/6">
