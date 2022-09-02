@@ -71,14 +71,14 @@ export default function Transactions() {
 
    return (
       <Layout>
-         <div className="h-screen bg-white transaction-adjust-scroll overflow-auto h-full">
+         <div className="bg-white transaction-adjust-scroll overflow-auto h-full">
             <div className="dashboard-header fixed top-0 left-0 right-0 pt-5 bg-white border-b border-border">
                <div className="flex flex-wrap items-center justify-between px-5">
                   <h4 className='flex items-center justify-between relative w-2/5'>
                      <FontAwesomeIcon icon={faAngleLeft} size="lg" />Aug 2022<FontAwesomeIcon icon={faAngleRight} size="lg" />
                   </h4>
                   <div className='flex items-center justify-between relative w-2/5'>
-                     <Select value={data.filter(obj => obj.value === selectedValue)} styles={customStyles} onChange={handleChange} options={data} name="paymentType" id="paymentType" className='text-16 leading-20 text-black font-medium w-full' />
+                     <Select value={data.filter(obj => obj.value === selectedValue)} blurInputOnSelect={true} styles={customStyles} onChange={handleChange} options={data} name="paymentType" id="paymentType" className='text-16 leading-20 text-black font-medium w-full' />
                   </div>
                </div>
                <div className="meta-info flex flex-wrap items-center justify-between mt-4">

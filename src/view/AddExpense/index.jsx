@@ -47,7 +47,7 @@ export default function AddExpense() {
                   </div>
                </div>
 
-               <div className="buttons-wrap mb-8 flex items-center justify-center px-5">
+               <div className="buttons-wrap mb-6 flex items-center justify-center px-5">
                   <button className='custom-btn rounded-xs border border-border uppercase text-14 leading-16 font-semibold inline-block mr-5'>income</button>
                   <button className='custom-btn rounded-xs border border-pink uppercase text-14 leading-16 font-semibold inline-block text-pink'>expense</button>
                </div>
