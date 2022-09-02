@@ -4,28 +4,55 @@ import Layout from '../../Layout';
 import Select from 'react-select';
 import { useState } from 'react';
 
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Pie } from 'react-chartjs-2';
+ChartJS.register(ArcElement, Tooltip, Legend);
+const options = {
+   plugins: {
+      legend: {
+         display: false,
+      }
+   },
+};
+export const datas = {
+   labels: ['Other', 'Diesel', 'Vedik', 'Car Maintenance'],
+   datasets: [
+      {
+         label: '# of Votes',
+         data: [58, 20, 12, 10],
+         backgroundColor: [
+            '#989CF2',
+            '#9019B8',
+            '#CA2091',
+            '#6B14D1',
+         ],
+         borderColor: [
+            '#ffffff',
+            '#ffffff',
+            '#ffffff',
+            '#ffffff',
+         ],
+         borderWidth: 1,
+      },
+   ],
+};
+
 export default function Transactions() {
 
    const customStyles = {
-      menu: () => ({
-         width: 150,
-         display: 'block',
-         position: 'absolute',
-         backgroundColor: '#ffffff',
-      }),
-      option: () => ({
+      option: (styles, state) => ({
+         ...styles,
          fontSize: 14,
          fontFamily: 'Inter, sans-serif',
-         padding: '5px 10px',
+         backgroundColor: state.isSelected ? '#6B14D1' : '#ffffff',
          '&:hover': { backgroundColor: '#6B14D1', color: '#ffffff' }
       }),
       indicatorSeparator: () => ({
          display: "none",
       }),
-      dropdownIndicator: () => ({
+      dropdownIndicator: (styles) => ({
+         ...styles,
          color: '#000000',
-         right: 8,
-         position: 'absolute'
       })
    }
 
@@ -44,9 +71,9 @@ export default function Transactions() {
 
    return (
       <Layout>
-         <div className="h-screen bg-white py-5">
-            <div className="dashboard-header fixed top-0 left-0 right-0 px-5 pt-5 bg-white border-b border-border">
-               <div className="flex flex-wrap items-center justify-between">
+         <div className="h-screen bg-white transaction-adjust-scroll overflow-auto h-full">
+            <div className="dashboard-header fixed top-0 left-0 right-0 pt-5 bg-white border-b border-border">
+               <div className="flex flex-wrap items-center justify-between px-5">
                   <h4 className='flex items-center justify-between relative w-2/5'>
                      <FontAwesomeIcon icon={faAngleLeft} size="lg" />Aug 2022<FontAwesomeIcon icon={faAngleRight} size="lg" />
                   </h4>
@@ -65,7 +92,12 @@ export default function Transactions() {
                   </div>
                </div>
             </div>
-            <div className="expense-listing pt-36 adjust-scroll-spacing overflow-scroll">
+            <div className="expense-listing">
+               <div className="pb-10 flex flex-wrap items-center justify-center">
+                  <div className="w-1/2">
+                     <Pie data={datas} options={options} />
+                  </div>
+               </div>
                <ul className="expense-list-wrap">
                   <li className="flex flex-wrap items-center justify-between">
                      <span className="expense-left-wrap w-4/6">

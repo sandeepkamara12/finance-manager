@@ -3,16 +3,18 @@
   margin: 0 auto;
 }
 .custom-btn {
-  padding: 0.688em 2.813em;
+  padding: 0.688em 2em;
 }
 .dashboard-header {
   max-width: 25.875rem;
   margin: auto;
+  z-index: 999;
 }
 .footer {
   max-width: 25.875rem;
   margin: 0 auto;
   height: 125px;
+  z-index: 99;
   /* box-shadow: 0 -2px 2.5px rgb(0 0 0 / 4%); */
 }
 .footer .footer-tab.active:not(.user-tab) svg path {
@@ -29,11 +31,23 @@ input[type="date"] {
 .adjust-scroll-spacing {
   padding-bottom: 7.813rem;
 }
-.expense-listing-wrap {
-  padding-top: 10rem;
+.adjust-scrollbar {
+  padding-top: 7rem;
   padding-bottom: 7.813rem;
 }
+/* .expense-listing-wrap {
+  padding-top: 10rem;
+  padding-bottom: 7.813rem;
+} */
 
+.dashboard-adjust-scroll {
+  padding-top: 10rem;
+  padding-bottom: 7.813rem; 
+}
+.transaction-adjust-scroll {
+  padding-top: 11rem;
+  padding-bottom: 7.813rem; 
+}
 .category-wrap .category:nth-child(odd) {
   padding-right: 0.75rem;
 }

@@ -43,7 +43,7 @@ export default function Home() {
    return (
       <Layout>
          <div className="mx-auto h-screen relative">
-            <div className="text-white">
+            <div className="text-white dashboard-adjust-scroll overflow-auto h-full">
                <div className="dashboard-header fixed top-0 left-0 right-0 p-5 bg-transaction-top bg-no-repeat">
                   <div className="flex flex-wrap items-center justify-between">
                      <h4 className='flex items-center justify-between relative w-2/5'>
@@ -69,7 +69,7 @@ export default function Home() {
                   </div>
                </div>
 
-               <div className='expense-listing-wrap px-5 adjust-scroll-spacing'>
+               <div className='expense-listing-wrap px-5'>
                   <div className="datewise-expense">
                      <h3 className='flex flex-wrap justify-between py-3 items-center'>
                         <span className='text-18 text-black leading-22 font-semibold tracking-tight'>Monday, 22 August</span>

@@ -39,19 +39,19 @@ export default function AddExpense() {
 
    return (
       <Layout>
-         <div className="h-screen bg-white adjust-scroll-spacing overflow-scroll">
-            <div className="add-expense">
-               <div className="expense-form">
+         <div className="h-screen bg-white">
+            <div className="add-expense adjust-scrollbar overflow-auto h-full">
+
+               <div className="expense-form fixed top-0 left-0 right-0 bg-white dashboard-header">
                   <div className="expense-header border-b border-border">
                      <h1 className='uppercase text-center font-semibold text-pink text-20 leading-24'>Add Expense</h1>
                   </div>
                </div>
 
-               <div className="buttons-wrap my-8 flex items-center justify-center px-5">
+               <div className="buttons-wrap mb-8 flex items-center justify-center px-5">
                   <button className='custom-btn rounded-xs border border-border uppercase text-14 leading-16 font-semibold inline-block mr-5'>income</button>
                   <button className='custom-btn rounded-xs border border-pink uppercase text-14 leading-16 font-semibold inline-block text-pink'>expense</button>
                </div>
-
 
                <form onSubmit={formik.handleSubmit} className="px-5">
                   <div className="field-wrap mb-3 flex flex-wrap items-center">
@@ -111,7 +111,7 @@ export default function AddExpense() {
                      />
                   </div>
                   <div className="buttons-wrap my-8 flex flex-wrap items-center justify-center">
-                     <button type="submit" className='custom-btn text-white bg-pink rounded-full text-14 leading-24 font-semibold mr-5 mb-5'>Save</button>
+                     <button type="submit" className='custom-btn text-white bg-pink rounded-full text-14 leading-24 font-semibold mr-3'>Save</button>
                      <button type="button" className='custom-btn text-white bg-purple rounded-full text-14 leading-24 font-semibold'>Save & Continue</button>
                   </div>
                </form>
