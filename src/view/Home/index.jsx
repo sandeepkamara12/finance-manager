@@ -6,25 +6,19 @@ import { useState } from 'react';
 
 export default function Home() {
    const customStyles = {
-      menu: () => ({
-         width: 150,
-         display: 'block',
-         position: 'absolute',
-         backgroundColor: '#ffffff',
-      }),
-      option: () => ({
+      option: (styles, state) => ({
+         ...styles,
          fontSize: 14,
          fontFamily: 'Inter, sans-serif',
-         padding: '5px 10px',
+         backgroundColor: state.isSelected ? '#6B14D1' : '#ffffff',
          '&:hover': { backgroundColor: '#6B14D1', color: '#ffffff' }
       }),
       indicatorSeparator: () => ({
          display: "none",
       }),
-      dropdownIndicator: () => ({
+      dropdownIndicator: (styles) => ({
+         ...styles,
          color: '#000000',
-         right: 8,
-         position: 'absolute'
       })
    }
    const data = [

@@ -42,11 +42,11 @@ input[type="date"] {
 
 .dashboard-adjust-scroll {
   padding-top: 10rem;
-  padding-bottom: 7.813rem; 
+  padding-bottom: 9rem; 
 }
 .transaction-adjust-scroll {
   padding-top: 11rem;
-  padding-bottom: 7.813rem; 
+  padding-bottom: 9rem; 
 }
 .category-wrap .category:nth-child(odd) {
   padding-right: 0.75rem;

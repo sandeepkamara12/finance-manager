@@ -23,6 +23,7 @@ export default function AddExpense() {
       initialValues: {
          paymentType: 'Cash',
          category: 'Fruits',
+         date: new Date(),
       },
       validationSchema: Yup.object().shape({
          amount: Yup.number()
@@ -34,8 +35,6 @@ export default function AddExpense() {
          alert(JSON.stringify(values, null, 2));
       },
    });
-
-   // console.log(formik);
 
    return (
       <Layout>
@@ -62,7 +61,7 @@ export default function AddExpense() {
                         type="date"
                         onChange={formik.handleChange}
                         value={formik.values.date}
-                        className="fields text-14 leading-18 text-black font-medium border-b border-border py-3 px-2 w-4/6 bg-transparent"
+                        className="fields text-14 leading-18 text-black font-medium border-b border-border py-2 px-2 w-4/6 bg-transparent"
                      />
                   </div>
                   <div className="field-wrap mb-3 flex flex-wrap items-center">
@@ -74,7 +73,7 @@ export default function AddExpense() {
                         type="text"
                         onChange={formik.handleChange}
                         value={formik.values.paymentType}
-                        className='fields text-14 leading-18 text-black font-medium border-b border-border py-3 px-2 w-4/6 inline-block'
+                        className='fields text-14 leading-18 text-black font-medium border-b border-border py-2 px-2 w-4/6 inline-block'
                      />
                   </div>
                   <div className="field-wrap mb-3 flex flex-wrap items-center">
@@ -85,7 +84,7 @@ export default function AddExpense() {
                         type="text"
                         onChange={formik.handleChange}
                         value={formik.values.category}
-                        className="fields text-14 leading-18 text-black font-medium border-b border-border py-3 px-2 w-4/6"
+                        className="fields text-14 leading-18 text-black font-medium border-b border-border py-2 px-2 w-4/6"
                      />
                   </div>
                   <div className="field-wrap mb-3 flex flex-wrap items-center">
@@ -96,7 +95,7 @@ export default function AddExpense() {
                         type="number"
                         onChange={formik.handleChange}
                         value={formik.values.amount}
-                        className="fields text-14 leading-18 text-black font-medium border-b border-border py-3 px-2 w-4/6"
+                        className="fields text-14 leading-18 text-black font-medium border-b border-border py-2 px-2 w-4/6"
                      />
                   </div>
                   <div className="field-wrap mb-3 flex flex-wrap items-center">
@@ -107,7 +106,7 @@ export default function AddExpense() {
                         type="text"
                         onChange={formik.handleChange}
                         value={formik.values.note}
-                        className="fields text-14 leading-18 text-black font-medium border-b border-border py-3 px-2 w-4/6"
+                        className="fields text-14 leading-18 text-black font-medium border-b border-border py-2 px-2 w-4/6"
                      />
                   </div>
                   <div className="buttons-wrap my-8 flex flex-wrap items-center justify-center">
