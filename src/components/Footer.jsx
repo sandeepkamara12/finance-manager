@@ -32,7 +32,7 @@ const Footer = () => {
                </svg>
             </Link>
          </div>
-         <div className={`footer-tab user-tab w-1/5 flex items-center justify-center ${location.pathname === "/account" || location.pathname === "/add-category" || location.pathname === "/category-listing" && "active"}`}>
+         <div className={`footer-tab user-tab w-1/5 flex items-center justify-center ${((location.pathname === "/account") || (location.pathname === "/add-category") || (location.pathname === "/category-listing")) ? "active" : ""}`}>
             <Link to="/account" >
                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clipPath="url(#clip0_177_135)">

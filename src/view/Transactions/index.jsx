@@ -83,56 +83,56 @@ export default function Transactions() {
                </div>
                <div className="meta-info flex flex-wrap items-center justify-between mt-4">
                   <div className="meta w-1/2 text-center pb-2">
-                     <span className="block text-16 leading-22 font-medium text-tabColor">Income</span>
-                     <span className="amount text-18 leading-24 font-medium block text-tabColor">₹ 90,000</span>
+                     <span className="block text-12 leading-16 font-medium text-tabColor">Income</span>
+                     <span className="amount text-14 leading-18 font-medium block text-tabColor">₹ 90,000</span>
                   </div>
                   <div className="meta w-1/2 text-center border-b border-pink pb-2">
-                     <span className="block text-16 leading-22 font-bold text-pink">Expense</span>
-                     <span className="amount text-18 leading-24 font-bold block text-pink">₹ 82,632.00</span>
+                     <span className="block text-12 leading-16 font-bold text-pink">Expense</span>
+                     <span className="amount text-14 leading-18 font-bold block text-pink">₹ 82,632.00</span>
                   </div>
                </div>
             </div>
             <div className="expense-listing">
-               <div className="pb-10 flex flex-wrap items-center justify-center">
-                  <div className="w-1/2">
+               <div className="pb-6 flex flex-wrap items-center justify-center">
+                  <div className="w-1/3">
                      <Pie data={datas} options={options} />
                   </div>
                </div>
                <ul className="expense-list-wrap">
-                  <li className="flex flex-wrap items-center justify-between">
+                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
                      <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage expense-category-other text-white font-semibold inline-flex flex-wrap items-center justify-center mr-3">58%</span>
-                        <span className="expense-type font-medium">Other</span>
+                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-other text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
+                        <span className="expense-type font-medium text-14 leading-18">Other</span>
                      </span>
                      <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right">₹ 47,890.00</span>
+                        <span className="expense-amount font-semibold block text-right text-14 leading-18">₹ 47,890.00</span>
                      </span>
                   </li>
-                  <li className="flex flex-wrap items-center justify-between">
+                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
                      <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage expense-category-diesel text-white font-semibold inline-flex flex-wrap items-center justify-center mr-3">58%</span>
-                        <span className="expense-type font-medium">Diesel</span>
+                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-diesel text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
+                        <span className="expense-type font-medium text-14 leading-18">Diesel</span>
                      </span>
                      <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right">₹ 47,890.00</span>
+                        <span className="expense-amount font-semibold block text-right text-14 leading-18">₹ 47,890.00</span>
                      </span>
                   </li>
-                  <li className="flex flex-wrap items-center justify-between">
+                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
                      <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-3">58%</span>
-                        <span className="expense-type font-medium">Vedik</span>
+                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
+                        <span className="expense-type font-medium text-14 leading-18">Vedik</span>
                      </span>
                      <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right">₹ 47,890.00</span>
+                        <span className="expense-amount font-semibold block text-right text-14 leading-18">₹ 47,890.00</span>
                      </span>
                   </li>
-                  <li className="flex flex-wrap items-center justify-between">
+                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
                      <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-3">58%</span>
-                        <span className="expense-type font-medium">Car Maintenance</span>
+                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
+                        <span className="expense-type font-medium text-14 leading-18">Car Maintenance</span>
                      </span>
                      <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right">₹ 47,890.00</span>
+                        <span className="expense-amount font-semibold block text-right text-14 leading-18">₹ 47,890.00</span>
                      </span>
                   </li>
                </ul>
