@@ -23,7 +23,7 @@ export default function AddCategory() {
    return (
       <>
          <Layout>
-            <div className="add-expense h-screen bg-white adjust-scrollbar overflow-auto h-full">
+            <div className="add-expense bg-white adjust-scrollbar overflow-auto h-full">
                <div className="expense-form dashboard-header fixed top-0 bg-white left-0 right-0">
                   <div className="expense-header border-b border-border">
                      <h1 className='uppercase text-center font-semibold text-pink text-20 leading-24'>Add Category</h1>
