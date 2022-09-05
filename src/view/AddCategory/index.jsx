@@ -24,9 +24,9 @@ export default function AddCategory() {
       <>
          <Layout>
             <div className="add-expense bg-white adjust-scrollbar overflow-auto h-full">
-               <div className="expense-form dashboard-header fixed top-0 bg-white left-0 right-0">
+               <div className="expense-form dashboard-header fixed top-0 bg-white left-0 right-0 shadow-headerShadow">
                   <div className="expense-header border-b border-border">
-                     <h1 className='uppercase text-center font-semibold text-pink text-20 leading-24'>Add Category</h1>
+                     <h1 className='uppercase text-center font-semibold text-pink text-14 leading-20'>Add Category</h1>
                   </div>
                </div>
 
@@ -38,11 +38,11 @@ export default function AddCategory() {
                         type="text"
                         onChange={formik.handleChange}
                         value={formik.values.category}
-                        className='fields text-16 leading-20 text-black font-medium border-b border-border py-3 px-2 w-full inline-block'
+                        className='fields text-12 leading-16 text-black font-medium border-b border-border py-3 px-2 w-full inline-block'
                      />
                   </div>
-                  <div className="buttons-wrap my-8 flex flex-wrap items-center justify-center">
-                     <button type="submit" className='custom-btn text-white bg-pink rounded-full text-14 leading-24 font-semibold w-full'>Save</button>
+                  <div className="buttons-wrap mt-4 flex flex-wrap items-center justify-center">
+                     <button type="submit" className='custom-btn text-white bg-pink rounded-full text-12 leading-20 font-semibold w-full'>Save</button>
                   </div>
                </form>
 
