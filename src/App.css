@@ -52,13 +52,13 @@ input[type="date"] {
   padding-bottom: 6rem; 
 }
 .category-wrap .category:nth-child(odd) {
-  padding-right: 0.75rem;
+  padding-right: 0.25rem;
 }
 .category-wrap .category:nth-child(even) {
-  padding-left: 0.75rem;
+  padding-left: 0.25rem;
 }
 .category-wrap .category > div {
-  min-height: 86px;
+  min-height: 70px;
 }
 
 /* Transactions Listing Css */
