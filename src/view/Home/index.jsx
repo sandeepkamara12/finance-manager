@@ -61,15 +61,15 @@ export default function Home() {
                   <div className="meta-info flex flex-wrap items-center justify-between mt-1">
                      <div className="meta">
                         <span className="block text-12 leading-16 font-normal text-pink">Income</span>
-                        <span className="amount text-14 leading-18 font-bold block text-pink">₹ 80,000</span>
+                        <span className="amount text-13 leading-16 font-bold block text-pink">₹ 80,000</span>
                      </div>
                      <div className="meta">
                         <span className="block text-12 leading-16 font-normal text-purple">Expense</span>
-                        <span className="amount text-14 leading-18 font-bold block text-purple">₹ 25,000</span>
+                        <span className="amount text-13 leading-16 font-bold block text-purple">₹ 25,000</span>
                      </div>
                      <div className="meta">
                         <span className="block text-12 leading-16 font-normal text-textColor">Total Balance</span>
-                        <span className="amount text-14 leading-18 font-bold block text-textColor">₹ 55,000</span>
+                        <span className="amount text-13 leading-16 font-bold block text-textColor">₹ 55,000</span>
                      </div>
                   </div>
                </div>
