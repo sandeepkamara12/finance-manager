@@ -1,0 +1,25 @@
+{
+   "short_name": "Finance Management",
+   "name": "Fanance Management",
+   "icons": [
+      {
+         "src": "favicon.ico",
+         "sizes": "48X48",
+         "type": "image/x-icon"
+      },
+      {
+         "src": "./src/assets/images/192X192.png",
+         "type": "image/png",
+         "sizes": "192x192"
+      },
+      {
+         "src": "./src/assets/images/512X512.png",
+         "type": "image/png",
+         "sizes": "512x512"
+      }
+   ],
+   "start_url": ".",
+   "display": "standalone",
+   "theme_color": "#000000",
+   "background_color": "#FFFFFF"
+}

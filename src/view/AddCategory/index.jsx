@@ -2,6 +2,8 @@ import Layout from "../../Layout";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 
 export default function AddCategory() {
    const history = useNavigate();
@@ -20,13 +22,25 @@ export default function AddCategory() {
          history('/category-listing');
       },
    });
+   function goToCategoryListing() {
+      history('/category-listing');
+   }
    return (
       <>
          <Layout>
             <div className="add-expense bg-white adjust-scrollbar overflow-auto h-full">
-               <div className="expense-form dashboard-header fixed top-0 bg-white left-0 right-0 shadow-headerShadow">
+               {/* <div className="expense-form dashboard-header fixed top-0 bg-white left-0 right-0 shadow-headerShadow">
                   <div className="expense-header border-b border-border">
                      <h1 className='uppercase text-center font-semibold text-pink text-14 leading-20'>Add Category</h1>
+                  </div>
+               </div> */}
+
+               <div className="expense-form fixed top-0 left-0 right-0 bg-white dashboard-header shadow-headerShadow">
+                  <div className="expense-header border-b border-border">
+                     <h1 className='uppercase text-center font-semibold text-black text-14 leading-18 flex flex-wrap items-center justify-center'>
+                        <span className='text-black' onClick={goToCategoryListing}><FontAwesomeIcon icon={faAngleLeft} size="lg" /></span>
+                        <span className="mx-auto inline-block">Add Category</span>
+                     </h1>
                   </div>
                </div>
 

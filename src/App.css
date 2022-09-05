@@ -13,7 +13,7 @@
 .footer {
   max-width: 25.875rem;
   margin: 0 auto;
-  height: 85px;
+  height: 70px;
   z-index: 99;
   /* box-shadow: 0 -2px 2.5px rgb(0 0 0 / 4%); */
 }
@@ -33,7 +33,7 @@ input[type="date"] {
 }
 .adjust-scrollbar {
   padding-top: 5rem;
-  padding-bottom: 7.813rem;
+  padding-bottom: 5rem;
 }
 .lower-btn {
   padding: 0.5rem 1.5rem;
@@ -45,11 +45,14 @@ input[type="date"] {
 
 .dashboard-adjust-scroll {
   padding-top: 6rem;
-  padding-bottom: 6rem; 
+  padding-bottom: 5rem; 
 }
 .transaction-adjust-scroll {
-  padding-top: 6rem;
-  padding-bottom: 6rem; 
+  padding-top: 16rem;
+  padding-bottom: 5rem; 
+}
+.pie-wrap {
+  top: 5rem;
 }
 .category-wrap .category:nth-child(odd) {
   padding-right: 0.25rem;
@@ -88,5 +91,5 @@ input[type="date"] {
   padding: 18px;
 }
 .add-expense-plus-icon {
-  bottom: 40px;
+  bottom: 25px;
 }

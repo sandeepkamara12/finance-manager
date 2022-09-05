@@ -18,7 +18,7 @@ export default function Login() {
                </Link>
             </div>
 
-            <img src={FinanceManager} className='mx-auto h-60' />
+            <img src={FinanceManager} className='mx-auto h-60' style={{ minHeight: '240px' }} />
          </div>
       </div>
    );

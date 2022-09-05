@@ -12,7 +12,7 @@ export default function Account() {
             <div className="add-expense add-expense adjust-scrollbar overflow-auto h-full ">
                <div className="expense-form dashboard-header fixed top-0 left-0 right-0 bg-white shadow-headerShadow">
                   <div className="expense-header border-b border-border">
-                     <h1 className='uppercase text-center font-semibold text-pink text-14 leading-18'>Account</h1>
+                     <h1 className='uppercase text-center font-semibold text-black text-14 leading-18'>Account</h1>
                   </div>
                </div>
 
