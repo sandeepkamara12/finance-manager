@@ -8,7 +8,7 @@ export default function Home() {
    const customStyles = {
       option: (styles, state) => ({
          ...styles,
-         fontSize: 14,
+         fontSize: 12,
          fontFamily: 'Inter, sans-serif',
          backgroundColor: state.isSelected ? '#6B14D1' : '#ffffff',
          '&:hover': { backgroundColor: '#6B14D1', color: '#ffffff' }
@@ -19,7 +19,16 @@ export default function Home() {
       dropdownIndicator: (styles) => ({
          ...styles,
          color: '#000000',
-      })
+      }),
+      control: base => ({
+         ...base,
+         height: 30,
+         minHeight: 30
+      }),
+      indicatorsContainer: (provided, state) => ({
+         ...provided,
+         height: '30px',
+      }),
    }
    const data = [
       { value: 'day', label: 'Day' },
@@ -40,25 +49,25 @@ export default function Home() {
             <div className="text-white dashboard-adjust-scroll overflow-auto h-full">
                <div className="dashboard-header fixed top-0 left-0 right-0 p-5 bg-transaction-top bg-no-repeat">
                   <div className="flex flex-wrap items-center justify-between">
-                     <h4 className='flex items-center justify-between relative w-2/5'>
+                     <h4 className='flex items-center justify-between relative w-2/5 text-14'>
                         <FontAwesomeIcon icon={faAngleLeft} size="lg" />Aug 2022<FontAwesomeIcon icon={faAngleRight} size="lg" />
                      </h4>
-                     <div className='flex items-center justify-between relative w-2/5'>
-                        <Select value={data.filter(obj => obj.value === selectedValue)} isSearchable={false} styles={customStyles} onChange={handleChange} options={data} name="paymentType" id="paymentType" className='text-16 leading-20 text-black font-medium w-full' />
+                     <div className='flex items-center justify-between relative w-2/6'>
+                        <Select value={data.filter(obj => obj.value === selectedValue)} isSearchable={false} styles={customStyles} onChange={handleChange} options={data} name="paymentType" id="paymentType" className='text-12 leading-16 text-black font-medium w-full' />
                      </div>
                   </div>
                   <div className="meta-info flex flex-wrap items-center justify-between mt-4">
                      <div className="meta">
-                        <span className="block text-14 leading-18 font-normal text-pink">Income</span>
-                        <span className="amount text-18 leading-20 font-bold pt-1 block text-pink">₹ 80,000</span>
+                        <span className="block text-12 leading-16 font-normal text-pink">Income</span>
+                        <span className="amount text-14 leading-18 font-bold pt-1 block text-pink">₹ 80,000</span>
                      </div>
                      <div className="meta">
-                        <span className="block text-14 leading-18 font-normal text-purple">Expense</span>
-                        <span className="amount text-18 leading-20 font-bold pt-1 block text-purple">₹ 25,000</span>
+                        <span className="block text-12 leading-16 font-normal text-purple">Expense</span>
+                        <span className="amount text-14 leading-18 font-bold pt-1 block text-purple">₹ 25,000</span>
                      </div>
                      <div className="meta">
-                        <span className="block text-14 leading-18 font-normal text-textColor">Total Balance</span>
-                        <span className="amount text-18 leading-20 font-bold pt-1 block text-textColor">₹ 55,000</span>
+                        <span className="block text-12 leading-16 font-normal text-textColor">Total Balance</span>
+                        <span className="amount text-14 leading-18 font-bold pt-1 block text-textColor">₹ 55,000</span>
                      </div>
                   </div>
                </div>

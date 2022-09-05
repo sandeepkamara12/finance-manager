@@ -13,7 +13,7 @@
 .footer {
   max-width: 25.875rem;
   margin: 0 auto;
-  height: 125px;
+  height: 85px;
   z-index: 99;
   /* box-shadow: 0 -2px 2.5px rgb(0 0 0 / 4%); */
 }
@@ -42,10 +42,10 @@ input[type="date"] {
 
 .dashboard-adjust-scroll {
   padding-top: 10rem;
-  padding-bottom: 9rem; 
+  padding-bottom: 6rem; 
 }
 .transaction-adjust-scroll {
-  padding-top: 10rem;
+  padding-top: 9rem;
   padding-bottom: 9rem; 
 }
 .category-wrap .category:nth-child(odd) {
