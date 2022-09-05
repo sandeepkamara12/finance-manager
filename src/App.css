@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 .custom-btn {
-  padding: 0.688em 2em;
+  padding: 0.50em 1em;
 }
 .dashboard-header {
   max-width: 25.875rem;
@@ -32,8 +32,11 @@ input[type="date"] {
   padding-bottom: 7.813rem;
 }
 .adjust-scrollbar {
-  padding-top: 7rem;
+  padding-top: 5rem;
   padding-bottom: 7.813rem;
+}
+.lower-btn {
+  padding: 0.5rem 1.5rem;
 }
 /* .expense-listing-wrap {
   padding-top: 10rem;
@@ -82,7 +85,7 @@ input[type="date"] {
   background-color: #6B14D1;
 }
 .expense-header {
-  padding: 28px;
+  padding: 18px;
 }
 .add-expense-plus-icon {
   bottom: 40px;
