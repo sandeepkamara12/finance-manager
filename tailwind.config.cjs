@@ -89,6 +89,7 @@ module.exports = {
     boxShadow: {
       'dashboardCard': '0 25px 40px -25px #9da1f3',
       'plusIconShadow': '0 10px 40px -10px #1f615c',
+      'headerShadow': '0 5px 15px -13px #1f615c',
     }
   },
   plugins: [],

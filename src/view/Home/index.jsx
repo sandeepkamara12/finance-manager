@@ -47,7 +47,7 @@ export default function Home() {
       <Layout>
          <div className="mx-auto h-screen relative">
             <div className="text-white dashboard-adjust-scroll overflow-auto h-full">
-               <div className="dashboard-header fixed top-0 left-0 right-0 p-5 bg-transaction-top bg-no-repeat">
+               <div className="dashboard-header fixed top-0 left-0 right-0 px-5 py-2 bg-white shadow-headerShadow">
                   <div className="flex flex-wrap items-center justify-between">
                      <h4 className='flex items-center justify-between relative w-2/5 text-14'>
                         <FontAwesomeIcon icon={faAngleLeft} size="lg" />Aug 2022<FontAwesomeIcon icon={faAngleRight} size="lg" />
