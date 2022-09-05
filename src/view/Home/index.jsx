@@ -56,25 +56,25 @@ export default function Home() {
                         <Select value={data.filter(obj => obj.value === selectedValue)} isSearchable={false} styles={customStyles} onChange={handleChange} options={data} name="paymentType" id="paymentType" className='text-12 leading-16 text-black font-medium w-full' />
                      </div>
                   </div>
-                  <div className="meta-info flex flex-wrap items-center justify-between mt-4">
+                  <div className="meta-info flex flex-wrap items-center justify-between mt-1">
                      <div className="meta">
                         <span className="block text-12 leading-16 font-normal text-pink">Income</span>
-                        <span className="amount text-14 leading-18 font-bold pt-1 block text-pink">₹ 80,000</span>
+                        <span className="amount text-14 leading-18 font-bold block text-pink">₹ 80,000</span>
                      </div>
                      <div className="meta">
                         <span className="block text-12 leading-16 font-normal text-purple">Expense</span>
-                        <span className="amount text-14 leading-18 font-bold pt-1 block text-purple">₹ 25,000</span>
+                        <span className="amount text-14 leading-18 font-bold block text-purple">₹ 25,000</span>
                      </div>
                      <div className="meta">
                         <span className="block text-12 leading-16 font-normal text-textColor">Total Balance</span>
-                        <span className="amount text-14 leading-18 font-bold pt-1 block text-textColor">₹ 55,000</span>
+                        <span className="amount text-14 leading-18 font-bold block text-textColor">₹ 55,000</span>
                      </div>
                   </div>
                </div>
 
                <div className='expense-listing-wrap px-5'>
                   <div className="datewise-expense">
-                     <h3 className='flex flex-wrap justify-between py-3 items-center'>
+                     <h3 className='flex flex-wrap justify-between py-2 items-center'>
                         <span className='text-14 text-black leading-20 font-semibold tracking-tight'>Monday, 22 August</span>
                         <span className='text-14 leading-20 font-semibold text-red tracking-tighter'>₹ 2400.00</span>
                      </h3>
@@ -110,7 +110,7 @@ export default function Home() {
                   </div>
 
                   <div className="datewise-expense">
-                     <h3 className='flex flex-wrap justify-between py-3 items-center'>
+                     <h3 className='flex flex-wrap justify-between py-2 items-center'>
                         <span className='text-14 text-black leading-20 font-semibold tracking-tight'>Monday, 12 August</span>
                         <span className='text-14 leading-20 font-semibold text-red tracking-tighter'>₹ 850.00</span>
                      </h3>
@@ -145,7 +145,7 @@ export default function Home() {
                      </div>
                   </div>
                   <div className="datewise-expense">
-                     <h3 className='flex flex-wrap justify-between py-3 items-center'>
+                     <h3 className='flex flex-wrap justify-between py-2 items-center'>
                         <span className='text-14 text-black leading-20 font-semibold tracking-tight'>Monday, 22 August</span>
                         <span className='text-14 leading-20 font-semibold text-red tracking-tighter'>₹ 2400.00</span>
                      </h3>
@@ -181,7 +181,7 @@ export default function Home() {
                   </div>
 
                   <div className="datewise-expense">
-                     <h3 className='flex flex-wrap justify-between py-3 items-center'>
+                     <h3 className='flex flex-wrap justify-between py-2 items-center'>
                         <span className='text-14 text-black leading-20 font-semibold tracking-tight'>Monday, 12 August</span>
                         <span className='text-14 leading-20 font-semibold text-red tracking-tighter'>₹ 850.00</span>
                      </h3>
@@ -216,7 +216,7 @@ export default function Home() {
                      </div>
                   </div>
                   <div className="datewise-expense">
-                     <h3 className='flex flex-wrap justify-between py-3 items-center'>
+                     <h3 className='flex flex-wrap justify-between py-2 items-center'>
                         <span className='text-14 text-black leading-20 font-semibold tracking-tight'>Monday, 22 August</span>
                         <span className='text-14 leading-20 font-semibold text-red tracking-tighter'>₹ 2400.00</span>
                      </h3>
@@ -252,7 +252,7 @@ export default function Home() {
                   </div>
 
                   <div className="datewise-expense">
-                     <h3 className='flex flex-wrap justify-between py-3 items-center'>
+                     <h3 className='flex flex-wrap justify-between py-2 items-center'>
                         <span className='text-14 text-black leading-20 font-semibold tracking-tight'>Monday, 12 August</span>
                         <span className='text-14 leading-20 font-semibold text-red tracking-tighter'>₹ 850.00</span>
                      </h3>
