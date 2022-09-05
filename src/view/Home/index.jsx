@@ -46,7 +46,7 @@ export default function Home() {
    return (
       <Layout>
          <div className="mx-auto h-screen relative">
-            <div className="text-white dashboard-adjust-scroll overflow-auto h-full">
+            <div className="text-black dashboard-adjust-scroll overflow-auto h-full">
                <div className="dashboard-header fixed top-0 left-0 right-0 px-5 py-2 bg-white shadow-headerShadow">
                   <div className="flex flex-wrap items-center justify-between">
                      <h4 className='flex items-center justify-between relative w-2/5 text-14'>
@@ -78,9 +78,9 @@ export default function Home() {
                         <span className='text-14 text-black leading-20 font-semibold tracking-tight'>Monday, 22 August</span>
                         <span className='text-14 leading-20 font-semibold text-red tracking-tighter'>₹ 2400.00</span>
                      </h3>
-                     <div className="datewise-total-expense py-3 border-y border-border">
+                     <div className="datewise-total-expense py-1 border-y border-border">
 
-                        <div className="daywise-expense flex flex-wrap justify-between py-2">
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
                            <div className="expense-left w-4/6 flex flex-wrap">
                               <div className='w-1/2 text-13 leading-16 text-purple font-semibold'>Fruits</div>
                               <div className="w-1/2 expense-note-payment-type">
@@ -93,7 +93,7 @@ export default function Home() {
                            </div>
                         </div>
 
-                        <div className="daywise-expense flex flex-wrap justify-between py-2">
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
                            <div className="expense-left w-4/6 flex flex-wrap">
                               <div className='w-1/2 text-13 leading-16 text-purple font-semibold'>Online Shopping</div>
                               <div className="w-1/2 expense-note-payment-type">
@@ -114,9 +114,9 @@ export default function Home() {
                         <span className='text-14 text-black leading-20 font-semibold tracking-tight'>Monday, 12 August</span>
                         <span className='text-14 leading-20 font-semibold text-red tracking-tighter'>₹ 850.00</span>
                      </h3>
-                     <div className="datewise-total-expense py-3 border-y border-border">
+                     <div className="datewise-total-expense py-1 border-y border-border">
 
-                        <div className="daywise-expense flex flex-wrap justify-between py-2">
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
                            <div className="expense-left w-4/6 flex flex-wrap">
                               <div className='w-1/2 text-13 leading-16 text-purple font-semibold'>Online Shopping</div>
                               <div className="w-1/2 expense-note-payment-type">
@@ -129,7 +129,7 @@ export default function Home() {
                            </div>
                         </div>
 
-                        <div className="daywise-expense flex flex-wrap justify-between py-2">
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
                            <div className="expense-left w-4/6 flex flex-wrap">
                               <div className='w-1/2 text-13 leading-16 text-purple font-semibold'>Fruits</div>
                               <div className="w-1/2 expense-note-payment-type">
@@ -149,9 +149,9 @@ export default function Home() {
                         <span className='text-14 text-black leading-20 font-semibold tracking-tight'>Monday, 22 August</span>
                         <span className='text-14 leading-20 font-semibold text-red tracking-tighter'>₹ 2400.00</span>
                      </h3>
-                     <div className="datewise-total-expense py-3 border-y border-border">
+                     <div className="datewise-total-expense py-1 border-y border-border">
 
-                        <div className="daywise-expense flex flex-wrap justify-between py-2">
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
                            <div className="expense-left w-4/6 flex flex-wrap">
                               <div className='w-1/2 text-13 leading-16 text-purple font-semibold'>Fruits</div>
                               <div className="w-1/2 expense-note-payment-type">
@@ -164,7 +164,7 @@ export default function Home() {
                            </div>
                         </div>
 
-                        <div className="daywise-expense flex flex-wrap justify-between py-2">
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
                            <div className="expense-left w-4/6 flex flex-wrap">
                               <div className='w-1/2 text-13 leading-16 text-purple font-semibold'>Online Shopping</div>
                               <div className="w-1/2 expense-note-payment-type">
@@ -185,9 +185,9 @@ export default function Home() {
                         <span className='text-14 text-black leading-20 font-semibold tracking-tight'>Monday, 12 August</span>
                         <span className='text-14 leading-20 font-semibold text-red tracking-tighter'>₹ 850.00</span>
                      </h3>
-                     <div className="datewise-total-expense py-3 border-y border-border">
+                     <div className="datewise-total-expense py-1 border-y border-border">
 
-                        <div className="daywise-expense flex flex-wrap justify-between py-2">
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
                            <div className="expense-left w-4/6 flex flex-wrap">
                               <div className='w-1/2 text-13 leading-16 text-purple font-semibold'>Online Shopping</div>
                               <div className="w-1/2 expense-note-payment-type">
@@ -200,7 +200,7 @@ export default function Home() {
                            </div>
                         </div>
 
-                        <div className="daywise-expense flex flex-wrap justify-between py-2">
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
                            <div className="expense-left w-4/6 flex flex-wrap">
                               <div className='w-1/2 text-13 leading-16 text-purple font-semibold'>Fruits</div>
                               <div className="w-1/2 expense-note-payment-type">
@@ -220,9 +220,9 @@ export default function Home() {
                         <span className='text-14 text-black leading-20 font-semibold tracking-tight'>Monday, 22 August</span>
                         <span className='text-14 leading-20 font-semibold text-red tracking-tighter'>₹ 2400.00</span>
                      </h3>
-                     <div className="datewise-total-expense py-3 border-y border-border">
+                     <div className="datewise-total-expense py-1 border-y border-border">
 
-                        <div className="daywise-expense flex flex-wrap justify-between py-2">
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
                            <div className="expense-left w-4/6 flex flex-wrap">
                               <div className='w-1/2 text-13 leading-16 text-purple font-semibold'>Fruits</div>
                               <div className="w-1/2 expense-note-payment-type">
@@ -235,7 +235,7 @@ export default function Home() {
                            </div>
                         </div>
 
-                        <div className="daywise-expense flex flex-wrap justify-between py-2">
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
                            <div className="expense-left w-4/6 flex flex-wrap">
                               <div className='w-1/2 text-13 leading-16 text-purple font-semibold'>Online Shopping</div>
                               <div className="w-1/2 expense-note-payment-type">
@@ -256,9 +256,9 @@ export default function Home() {
                         <span className='text-14 text-black leading-20 font-semibold tracking-tight'>Monday, 12 August</span>
                         <span className='text-14 leading-20 font-semibold text-red tracking-tighter'>₹ 850.00</span>
                      </h3>
-                     <div className="datewise-total-expense py-3 border-y border-border">
+                     <div className="datewise-total-expense py-1 border-y border-border">
 
-                        <div className="daywise-expense flex flex-wrap justify-between py-2">
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
                            <div className="expense-left w-4/6 flex flex-wrap">
                               <div className='w-1/2 text-13 leading-16 text-purple font-semibold'>Online Shopping</div>
                               <div className="w-1/2 expense-note-payment-type">
@@ -271,7 +271,7 @@ export default function Home() {
                            </div>
                         </div>
 
-                        <div className="daywise-expense flex flex-wrap justify-between py-2">
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
                            <div className="expense-left w-4/6 flex flex-wrap">
                               <div className='w-1/2 text-13 leading-16 text-purple font-semibold'>Fruits</div>
                               <div className="w-1/2 expense-note-payment-type">
