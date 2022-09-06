@@ -11,7 +11,7 @@ import CategoryListing from './view/CategoryListing';
 const routes = [
    {
       path: "/",
-      component: <Splash />,
+      component: <Home />,
    },
    {
       path: "/not-found",

@@ -1,12 +1,6 @@
 {
-   "short_name": "Finance Management Short Name",
-   "name": "Fanance Management Name",
-   "description": "Next Generation eCommerce Solutions for Magento",
-   "splash": [
-      {
-         "src": "./assets/images/splash.png"
-      }
-   ],
+   "short_name": "Finance Management",
+   "name": "Fanance Management",
    "icons": [
       {
          "src": "./assets/images/favicon.ico",
