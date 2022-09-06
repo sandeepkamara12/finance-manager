@@ -2,6 +2,9 @@
   max-width: 25.875rem;
   margin: 0 auto;
 }
+* {
+  -webkit-tap-highlight-color: transparent;
+}
 .custom-btn {
   padding: 0.50em 1em;
 }

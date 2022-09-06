@@ -4,8 +4,8 @@ import SplashIcon from "../../assets/images/splashicon.svg";
 import Google from '../../assets/images/google.png';
 export default function Login() {
    return (
-      <div className="p-5 bg-login h-screen text-center overflow-y-auto flex flex-wrap items-center justify-center">
-         <div className='top-area flex justify-center flex-wrap flex-column items-center'>
+      <div className="p-5 bg-login h-screen text-center overflow-y-auto flex flex-wrap items-start justify-center">
+         <div className='top-area flex justify-center flex-wrap flex-column pt-20'>
             <div className='w-full'>
                <img src={SplashIcon} className="m-auto h-16" />
             </div>
@@ -18,7 +18,7 @@ export default function Login() {
                </Link>
             </div>
 
-            <img src={FinanceManager} className='mx-auto h-48' style={{ minHeight: '192px' }} />
+            <img src={FinanceManager} className='mx-auto h-48' />
          </div>
       </div>
    );

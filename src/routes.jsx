@@ -11,7 +11,7 @@ import CategoryListing from './view/CategoryListing';
 const routes = [
    {
       path: "/",
-      component: <Home />,
+      component: <Login />,
    },
    {
       path: "/not-found",
@@ -25,10 +25,10 @@ const routes = [
       path: "/transactions",
       component: <Transactions />,
    },
-   {
-      path: "/login",
-      component: <Login />,
-   },
+   // {
+   //    path: "/login",
+   //    component: <Login />,
+   // },
    {
       path: "/add-expense",
       component: <AddExpense />,
