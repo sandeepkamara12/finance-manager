@@ -13,7 +13,7 @@ export default function Login() {
             <h2 className="text-16 leading-20 font-semibold">Seamlessly manage your Finances</h2>
             <p className="pt-2 pb-4 text-14 leading-20 text-textColor">Discover the revolutionary semi automated financial management experience.</p>
             <div className='w-full'>
-               <Link to='/home' className='flex items-center justify-center py-3 px-6 bg-white rounded-full font-semibold text-13 leading-20 mb-2 w-4/6 mx-auto'>
+               <Link to='/home' className='flex items-center justify-center py-3 px-6 bg-white rounded-full font-semibold text-13 leading-20 mb-2 w-full'>
                   <img src={Google} className='mr-2' />Continue with Google
                </Link>
             </div>
