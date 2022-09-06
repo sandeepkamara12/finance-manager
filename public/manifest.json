@@ -1,6 +1,11 @@
 {
    "short_name": "Finance Management",
    "name": "Fanance Management",
+   "splash": [
+      {
+         "src": "./assets/images/splash.png"
+      }
+   ],
    "icons": [
       {
          "src": "./assets/images/favicon.ico",
