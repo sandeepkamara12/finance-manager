@@ -3,25 +3,25 @@
    "name": "Fanance Management",
    "icons": [
       {
-         "src": "favicon.ico",
+         "src": "/favicon.ico",
          "sizes": "48X48",
          "type": "image/x-icon",
          "purpose": "any"
       },
       {
-         "src": "192x192.png",
+         "src": "/192x192.png",
          "type": "image/png",
          "sizes": "192x192",
          "purpose": "any"
       },
       {
-         "src": "512x512.png",
+         "src": "/512x512.png",
          "type": "image/png",
          "sizes": "512x512",
          "purpose": "any"
       }
    ],
-   "start_url": "https://new-finance-manager.vercel.app",
+   "start_url": "/",
    "display": "standalone",
    "theme_color": "#000000",
    "background_color": "#FFFFFF"
