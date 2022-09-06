@@ -1,10 +1,11 @@
 import Layout from "../../Layout";
 import EditCategory from '../../assets/images/edit-category.svg';
 import DragCategory from '../../assets/images/drag-category.svg';
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const CategoryListing = () => {
-   const listItems = [
+   const items = [
       "Communication",
       "Electricity",
       "Grocery",
@@ -19,7 +20,13 @@ const CategoryListing = () => {
       "Vehicle",
       "Others"
    ];
-
+   let [listItems, setListItems] = useState(items);
+   const deletedListItem = (e) => {
+      let itemNeedToBeDelete = e.target.id;
+      let temp = [...listItems];
+      temp.splice(itemNeedToBeDelete, 1);
+      setListItems(temp);
+   };
    return (
       <>
          <Layout>
@@ -36,8 +43,8 @@ const CategoryListing = () => {
                   <ul className="">
                      {listItems.map((item, index) => (
                         <li className="flex flex-wrap items-center justify-between py-1" key={index}>
-                           <span className="expense-left-wrap w-4/6">
-                              <span className="bg-pink rounded-full w-4 h-4 text-white font-normal inline-flex flex-wrap items-center justify-center mr-3 leading-16">-</span>
+                           <span className="expense-left-wrap w-4/6 flex flex-wrap items-center">
+                              <span onClick={deletedListItem} id={index} className="bg-pink rounded-full w-4 h-4 text-white font-normal inline-flex flex-wrap items-center justify-center mr-3 leading-16">-</span>
                               <span className="text-12 capitalize">{`${item}`}</span>
                            </span>
                            <span className="expense-right-wrap w-2/6">

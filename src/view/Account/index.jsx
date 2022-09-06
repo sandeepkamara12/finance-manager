@@ -21,7 +21,7 @@ export default function Account() {
                      <div className="bg-profile-gradient w-full rounded py-3 flex flex-wrap items-center justify-center flex-column px-3 h-full">
                         <figure className='w-full'>
                            <NavLink to="/home">
-                              <img src={AccountProfile} alt="Profile" className='mx-auto w-6' />
+                              <img src={AccountProfile} alt="Profile" className='mx-auto w-6' style={{ "height": "24px" }} />
                            </NavLink>
                         </figure>
                         <div className="w-full pt-2 text-white text-12 leading-16">
@@ -34,7 +34,7 @@ export default function Account() {
                   <div className="category w-1/2 flex flex-wrap items-center justify-center flex-column text-center pb-2">
                      <div className="bg-income-gradient w-full rounded py-3 flex flex-wrap items-center justify-center flex-column px-3 h-full">
                         <figure className='w-full'>
-                           <img src={AccountInExpense} alt="Profile" className='mx-auto w-6' />
+                           <img src={AccountInExpense} alt="Profile" className='mx-auto w-6' style={{ "height": "24px" }} />
                         </figure>
                         <div className="w-full pt-2 text-white text-12 leading-16">Income Category</div>
                      </div>
@@ -43,7 +43,7 @@ export default function Account() {
                      <div className="bg-profile-gradient w-full rounded py-3 flex flex-wrap items-center justify-center flex-column px-3 h-full">
                         <figure className='w-full'>
                            <NavLink to="/category-listing">
-                              <img src={AccountInExpense} alt="Profile" className='mx-auto w-6' />
+                              <img src={AccountInExpense} alt="Profile" className='mx-auto w-6' style={{ "height": "24px" }} />
                            </NavLink>
                         </figure>
                         <div className="w-full pt-2 text-white text-12 leading-16">
@@ -56,7 +56,7 @@ export default function Account() {
                   <div className="category w-1/2 flex flex-wrap items-center justify-center flex-column text-center pb-2">
                      <div className="bg-income-gradient w-full rounded py-3 flex flex-wrap items-center justify-center flex-column px-3 h-full">
                         <figure className='w-full'>
-                           <img src={Help} alt="Profile" className='mx-auto w-6' />
+                           <img src={Help} alt="Profile" className='mx-auto w-6' style={{ "height": "24px" }} />
                         </figure>
                         <div className="w-full pt-2 text-white text-12 leading-16">Help</div>
                      </div>
@@ -64,7 +64,7 @@ export default function Account() {
                   <div className="category w-1/2 flex flex-wrap items-center justify-center flex-column text-center pb-2">
                      <div className="bg-income-gradient w-full rounded py-3 flex flex-wrap items-center justify-center flex-column px-3 h-full">
                         <figure className='w-full'>
-                           <img src={Share} alt="Profile" className='mx-auto w-6' />
+                           <img src={Share} alt="Profile" className='mx-auto w-6' style={{ "height": "24px" }} />
                         </figure>
                         <div className="w-full pt-2 text-white text-12 leading-16">Share</div>
                      </div>
