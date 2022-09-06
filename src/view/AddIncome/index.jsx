@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom';
 
-export default function AddExpense() {
+export default function AddIncome() {
    const [selectedValue, setValueState] = useState("cash");
    const [selectedCat, setValueCat] = useState("lpg");
 
@@ -105,14 +105,14 @@ export default function AddExpense() {
                   <div className="expense-header border-b border-border">
                      <h1 className='uppercase text-center font-semibold text-black text-14 leading-18 flex flex-wrap items-center justify-center'>
                         {/* <span className='text-black'><FontAwesomeIcon icon={faAngleLeft} size="lg" /></span> */}
-                        <span className="mx-auto inline-block">Add Expense</span>
+                        <span className="mx-auto inline-block">Add Income</span>
                      </h1>
                   </div>
                </div>
 
                <div className="buttons-wrap mb-6 flex items-center justify-center px-5">
-                  <NavLink to="/add-income" className='custom-btn rounded-xs border border-border uppercase text-12 leading-16 font-semibold inline-block mr-5'>income</NavLink>
-                  <NavLink to="/add-expense" className='custom-btn rounded-xs border border-pink uppercase text-12 leading-16 font-semibold inline-block text-pink'>expense</NavLink>
+                  <NavLink to="/add-income" className='custom-btn rounded-xs border border-pink uppercase text-12 leading-16 font-semibold inline-block mr-5 text-pink'>income</NavLink>
+                  <NavLink to="/add-expense" className='custom-btn rounded-xs border border-border uppercase text-12 leading-16 font-semibold inline-block'>expense</NavLink>
                </div>
 
                <form onSubmit={formik.handleSubmit} className="px-5">

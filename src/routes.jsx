@@ -4,6 +4,7 @@ import Transactions from './view/Transactions';
 import Login from './view/Login';
 import Home from './view/Home';
 import AddExpense from './view/AddExpense';
+import AddIncome from './view/AddIncome';
 import AddCategory from './view/AddCategory';
 import Account from './view/Account';
 import CategoryListing from './view/CategoryListing';
@@ -40,6 +41,10 @@ const routes = [
    {
       path: "/category-listing",
       component: <CategoryListing />,
+   },
+   {
+      path: "/add-income",
+      component: <AddIncome />,
    }
 ]
 
