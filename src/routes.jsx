@@ -25,10 +25,6 @@ const routes = [
       path: "/transactions",
       component: <Transactions />,
    },
-   // {
-   //    path: "/login",
-   //    component: <Login />,
-   // },
    {
       path: "/add-expense",
       component: <AddExpense />,
