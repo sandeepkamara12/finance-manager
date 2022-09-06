@@ -21,7 +21,7 @@
          "purpose": "any"
       }
    ],
-   "start_url": "https://new-finance-manager.vercel.app/",
+   "start_url": "https://new-finance-manager.vercel.app",
    "display": "standalone",
    "theme_color": "#000000",
    "background_color": "#FFFFFF"
