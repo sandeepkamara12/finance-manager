@@ -1,10 +1,8 @@
 import Layout from '../../Layout';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import Select, { NonceProvider } from 'react-select'
-import { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
+import Select from 'react-select'
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 export default function AddExpense() {
@@ -79,22 +77,22 @@ export default function AddExpense() {
       { value: 'others', label: 'Others' }
    ];
 
-   const formik = useFormik({
-      initialValues: {
-         paymentType: 'Cash',
-         category: 'Fruits',
-         date: new Date(),
-      },
-      validationSchema: Yup.object().shape({
-         amount: Yup.number()
-            .min(2, 'Too Short!')
-            .max(50, 'Too Long!')
-            .required('Required'),
-      }),
-      onSubmit: values => {
-         alert(JSON.stringify(values, null, 2));
-      },
-   });
+   // const formik = useFormik({
+   //    initialValues: {
+   //       paymentType: 'Cash',
+   //       category: 'Fruits',
+   //       date: new Date(),
+   //    },
+   //    validationSchema: Yup.object().shape({
+   //       amount: Yup.number()
+   //          .min(2, 'Too Short!')
+   //          .max(50, 'Too Long!')
+   //          .required('Required'),
+   //    }),
+   //    onSubmit: values => {
+   //       alert(JSON.stringify(values, null, 2));
+   //    },
+   // });
 
    return (
       <Layout>
@@ -115,15 +113,15 @@ export default function AddExpense() {
                   <NavLink to="/add-expense" className='custom-btn rounded-xs border border-pink uppercase text-12 leading-16 font-semibold inline-block text-pink'>expense</NavLink>
                </div>
 
-               <form onSubmit={formik.handleSubmit} className="px-5">
+               <form className="px-5">
                   <div className="field-wrap mb-2 flex flex-wrap items-center">
                      <label htmlFor="date" className="text-12 leading-16 text-formLabel inline-block w-2/6">Date</label>
                      <input
                         id="date"
                         name="date"
                         type="date"
-                        onChange={formik.handleChange}
-                        value={formik.values.date}
+                        // onChange={formik.handleChange}
+                        // value={formik.values.date}
                         className="fields text-12 leading-16 text-black font-medium border-b border-border py-1 px-2 w-4/6 bg-transparent"
                      />
                   </div>
@@ -141,8 +139,8 @@ export default function AddExpense() {
                         id="amount"
                         name="amount"
                         type="number"
-                        onChange={formik.handleChange}
-                        value={formik.values.amount}
+                        // onChange={formik.handleChange}
+                        // value={formik.values.amount}
                         className="fields text-12 leading-16 text-black font-medium border-b border-border py-1 px-2 w-4/6"
                      />
                   </div>
@@ -152,8 +150,8 @@ export default function AddExpense() {
                         id="note"
                         name="note"
                         type="text"
-                        onChange={formik.handleChange}
-                        value={formik.values.note}
+                        // onChange={formik.handleChange}
+                        // value={formik.values.note}
                         className="fields text-12 leading-16 text-black font-medium border-b border-border py-1 px-2 w-4/6"
                      />
                   </div>

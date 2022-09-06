@@ -96,3 +96,6 @@ input[type="date"] {
 .add-expense-plus-icon {
   bottom: 25px;
 }
+.remove-category-modal {
+  background-color: rgba(0,0,0,0.2);
+}
