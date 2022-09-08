@@ -5,10 +5,9 @@ import { Routes, Route, Link } from "react-router-dom";
 import routes from './routes';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-
     <div className="App">
       <Routes>
         {

@@ -1,6 +1,7 @@
 import Splash from './view/Splash';
 import NotFound from './view/NotFound';
 import Transactions from './view/Transactions';
+import IncomeStatics from './view/Transactions/incomeStatics';
 import Login from './view/Login';
 import Home from './view/Home';
 import AddExpense from './view/AddExpense';
@@ -25,6 +26,10 @@ const routes = [
    {
       path: "/transactions",
       component: <Transactions />,
+   },
+   {
+      path: "/income-statics",
+      component: <IncomeStatics />,
    },
    {
       path: "/add-expense",

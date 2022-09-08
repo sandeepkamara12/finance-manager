@@ -4,26 +4,62 @@ import Layout from '../../Layout';
 import Select from 'react-select';
 import { useState } from 'react';
 import { AgChartsReact } from "ag-charts-react";
-
+import { NavLink } from 'react-router-dom';
 export default function Transactions() {
 
    const options = {
       data: [
          {
-            label: "Car Maintenance",
-            value: 56.9
+            label: "Communication",
+            value: 5
          },
          {
-            label: "Vedik",
-            value: 22.5
+            label: "Electricity",
+            value: 7
          },
          {
-            label: "Diesel",
-            value: 6.8
+            label: "Grocery",
+            value: 5
+         },
+         {
+            label: "House Rent",
+            value: 5
+         },
+         {
+            label: "LPG",
+            value: 5
+         },
+         {
+            label: "Life and Entertainment",
+            value: 5
+         },
+         {
+            label: "Personal",
+            value: 5
+         },
+         {
+            label: "Medical",
+            value: 5
+         },
+         {
+            label: "Resaurant",
+            value: 5
+         },
+         {
+            label: "Shopping",
+            value: 5
+         },
+         {
+            label: "Transportation",
+            value: 5
+         },
+         {
+            label: "Vehicle",
+            value: 5
          },
          {
             label: "Other",
-            value: 6.8
+            value: 4
          }
       ],
       series: [
@@ -32,7 +68,11 @@ export default function Transactions() {
             angleKey: "value",
             labelKey: "label",
             showInLegend: false,
-            // label: 
+            label: {
+               fontSize: 10,
+               fontWeight: '500',
+               fontFamily: 'Inter'
+            }
          }
       ]
    };
@@ -91,18 +131,22 @@ export default function Transactions() {
                   </div>
                </div>
                <div className="meta-info flex flex-wrap items-center justify-between mt-1">
-                  <div className="meta w-1/2 text-center pb-1">
-                     <span className="block text-12 leading-16 font-normal text-tabColor">Income</span>
-                     <span className="amount text-13 leading-16 font-medium block text-tabColor">₹ 90,000</span>
-                  </div>
-                  <div className="meta w-1/2 text-center border-b border-pink pb-1">
-                     <span className="block text-12 leading-16 font-normal text-pink">Expense</span>
-                     <span className="amount text-13 leading-16 font-bold block text-pink">₹ 82,632.00</span>
-                  </div>
+                  <NavLink to="/income-statics" className="meta w-1/2 text-center pb-1">
+                     <div>
+                        <span className="block text-12 leading-16 font-normal text-tabColor">Income</span>
+                        <span className="amount text-13 leading-16 font-medium block text-tabColor">₹ 90,000</span>
+                     </div>
+                  </NavLink>
+                  <NavLink to="/transactions" className="meta w-1/2 text-center border-b border-pink pb-1">
+                     <div>
+                        <span className="block text-12 leading-16 font-normal text-pink">Expense</span>
+                        <span className="amount text-13 leading-16 font-bold block text-pink">₹ 82,632.00</span>
+                     </div>
+                  </NavLink>
                </div>
             </div>
-            <div className="py-2 flex flex-wrap items-center justify-center fixed w-full pie-wrap shadow-headerShadow bg-white dashboard-header">
-               <div className="w-50 mx-auto">
+            <div className="py-2 flex flex-wrap items-center justify-center fixed w-full pie-wrap shadow-headerShadow bg-white dashboard-header" style={{ zIndex: 1 }}>
+               <div className="w-full mx-auto">
                   <AgChartsReact options={options} />
                </div>
             </div>
@@ -111,7 +155,7 @@ export default function Transactions() {
                   <li className="flex flex-wrap items-center justify-between py-2 px-3">
                      <span className="expense-left-wrap w-4/6">
                         <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-other text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Other</span>
+                        <span className="expense-type font-medium text-12 leading-16">Communication</span>
                      </span>
                      <span className="expense-right-wrap w-2/6">
                         <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
@@ -120,7 +164,7 @@ export default function Transactions() {
                   <li className="flex flex-wrap items-center justify-between py-2 px-3">
                      <span className="expense-left-wrap w-4/6">
                         <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-diesel text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Diesel</span>
+                        <span className="expense-type font-medium text-12 leading-16">Electricity</span>
                      </span>
                      <span className="expense-right-wrap w-2/6">
                         <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
@@ -129,7 +173,7 @@ export default function Transactions() {
                   <li className="flex flex-wrap items-center justify-between py-2 px-3">
                      <span className="expense-left-wrap w-4/6">
                         <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Vedik</span>
+                        <span className="expense-type font-medium text-12 leading-16">Grocery</span>
                      </span>
                      <span className="expense-right-wrap w-2/6">
                         <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
@@ -138,7 +182,34 @@ export default function Transactions() {
                   <li className="flex flex-wrap items-center justify-between py-2 px-3">
                      <span className="expense-left-wrap w-4/6">
                         <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Car Maintenance</span>
+                        <span className="expense-type font-medium text-12 leading-16">House Rent</span>
+                     </span>
+                     <span className="expense-right-wrap w-2/6">
+                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
+                     </span>
+                  </li>
+                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
+                     <span className="expense-left-wrap w-4/6">
+                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-other text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
+                        <span className="expense-type font-medium text-12 leading-16">LPG</span>
+                     </span>
+                     <span className="expense-right-wrap w-2/6">
+                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
+                     </span>
+                  </li>
+                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
+                     <span className="expense-left-wrap w-4/6">
+                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-diesel text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
+                        <span className="expense-type font-medium text-12 leading-16">Life and Entertainment</span>
+                     </span>
+                     <span className="expense-right-wrap w-2/6">
+                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
+                     </span>
+                  </li>
+                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
+                     <span className="expense-left-wrap w-4/6">
+                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
+                        <span className="expense-type font-medium text-12 leading-16">Personal</span>
                      </span>
                      <span className="expense-right-wrap w-2/6">
                         <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
@@ -147,7 +218,25 @@ export default function Transactions() {
                   <li className="flex flex-wrap items-center justify-between py-2 px-3">
                      <span className="expense-left-wrap w-4/6">
                         <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Car Maintenance</span>
+                        <span className="expense-type font-medium text-12 leading-16">Medical</span>
+                     </span>
+                     <span className="expense-right-wrap w-2/6">
+                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
+                     </span>
+                  </li>
+                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
+                     <span className="expense-left-wrap w-4/6">
+                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-diesel text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
+                        <span className="expense-type font-medium text-12 leading-16">Resaurant</span>
+                     </span>
+                     <span className="expense-right-wrap w-2/6">
+                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
+                     </span>
+                  </li>
+                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
+                     <span className="expense-left-wrap w-4/6">
+                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
+                        <span className="expense-type font-medium text-12 leading-16">Shopping</span>
                      </span>
                      <span className="expense-right-wrap w-2/6">
                         <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
@@ -156,7 +245,16 @@ export default function Transactions() {
                   <li className="flex flex-wrap items-center justify-between py-2 px-3">
                      <span className="expense-left-wrap w-4/6">
                         <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Car Maintenance</span>
+                        <span className="expense-type font-medium text-12 leading-16">Transportation</span>
+                     </span>
+                     <span className="expense-right-wrap w-2/6">
+                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
+                     </span>
+                  </li>
+                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
+                     <span className="expense-left-wrap w-4/6">
+                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
+                        <span className="expense-type font-medium text-12 leading-16">Vehicle</span>
                      </span>
                      <span className="expense-right-wrap w-2/6">
                         <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
@@ -165,7 +263,17 @@ export default function Transactions() {
                   <li className="flex flex-wrap items-center justify-between py-2 px-3">
                      <span className="expense-left-wrap w-4/6">
                         <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Car Maintenance</span>
+                        <span className="expense-type font-medium text-12 leading-16">Other</span>
+                     </span>
+                     <span className="expense-right-wrap w-2/6">
+                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
+                     </span>
+                  </li>
+                  {/* xhbd */}
+                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
+                     <span className="expense-left-wrap w-4/6">
+                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
+                        <span className="expense-type font-medium text-12 leading-16">Shopping</span>
                      </span>
                      <span className="expense-right-wrap w-2/6">
                         <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
@@ -174,7 +282,16 @@ export default function Transactions() {
                   <li className="flex flex-wrap items-center justify-between py-2 px-3">
                      <span className="expense-left-wrap w-4/6">
                         <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Car Maintenance</span>
+                        <span className="expense-type font-medium text-12 leading-16">Transportation</span>
+                     </span>
+                     <span className="expense-right-wrap w-2/6">
+                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
+                     </span>
+                  </li>
+                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
+                     <span className="expense-left-wrap w-4/6">
+                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
+                        <span className="expense-type font-medium text-12 leading-16">Vehicle</span>
                      </span>
                      <span className="expense-right-wrap w-2/6">
                         <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
@@ -183,7 +300,16 @@ export default function Transactions() {
                   <li className="flex flex-wrap items-center justify-between py-2 px-3">
                      <span className="expense-left-wrap w-4/6">
                         <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Car Maintenance</span>
+                        <span className="expense-type font-medium text-12 leading-16">Other</span>
+                     </span>
+                     <span className="expense-right-wrap w-2/6">
+                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
+                     </span>
+                  </li>
+                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
+                     <span className="expense-left-wrap w-4/6">
+                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
+                        <span className="expense-type font-medium text-12 leading-16">Shopping</span>
                      </span>
                      <span className="expense-right-wrap w-2/6">
                         <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
@@ -192,7 +318,16 @@ export default function Transactions() {
                   <li className="flex flex-wrap items-center justify-between py-2 px-3">
                      <span className="expense-left-wrap w-4/6">
                         <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Car Maintenance</span>
+                        <span className="expense-type font-medium text-12 leading-16">Transportation</span>
+                     </span>
+                     <span className="expense-right-wrap w-2/6">
+                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
+                     </span>
+                  </li>
+                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
+                     <span className="expense-left-wrap w-4/6">
+                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
+                        <span className="expense-type font-medium text-12 leading-16">Vehicle</span>
                      </span>
                      <span className="expense-right-wrap w-2/6">
                         <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
@@ -201,7 +336,16 @@ export default function Transactions() {
                   <li className="flex flex-wrap items-center justify-between py-2 px-3">
                      <span className="expense-left-wrap w-4/6">
                         <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Car Maintenance</span>
+                        <span className="expense-type font-medium text-12 leading-16">Other</span>
+                     </span>
+                     <span className="expense-right-wrap w-2/6">
+                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
+                     </span>
+                  </li>
+                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
+                     <span className="expense-left-wrap w-4/6">
+                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
+                        <span className="expense-type font-medium text-12 leading-16">Shopping</span>
                      </span>
                      <span className="expense-right-wrap w-2/6">
                         <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
@@ -210,7 +354,16 @@ export default function Transactions() {
                   <li className="flex flex-wrap items-center justify-between py-2 px-3">
                      <span className="expense-left-wrap w-4/6">
                         <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Car Maintenance</span>
+                        <span className="expense-type font-medium text-12 leading-16">Transportation</span>
+                     </span>
+                     <span className="expense-right-wrap w-2/6">
+                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
+                     </span>
+                  </li>
+                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
+                     <span className="expense-left-wrap w-4/6">
+                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
+                        <span className="expense-type font-medium text-12 leading-16">Vehicle</span>
                      </span>
                      <span className="expense-right-wrap w-2/6">
                         <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
@@ -219,7 +372,16 @@ export default function Transactions() {
                   <li className="flex flex-wrap items-center justify-between py-2 px-3">
                      <span className="expense-left-wrap w-4/6">
                         <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Car Maintenance</span>
+                        <span className="expense-type font-medium text-12 leading-16">Other</span>
+                     </span>
+                     <span className="expense-right-wrap w-2/6">
+                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
+                     </span>
+                  </li>
+                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
+                     <span className="expense-left-wrap w-4/6">
+                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
+                        <span className="expense-type font-medium text-12 leading-16">Shopping</span>
                      </span>
                      <span className="expense-right-wrap w-2/6">
                         <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
@@ -228,7 +390,16 @@ export default function Transactions() {
                   <li className="flex flex-wrap items-center justify-between py-2 px-3">
                      <span className="expense-left-wrap w-4/6">
                         <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Car Maintenance</span>
+                        <span className="expense-type font-medium text-12 leading-16">Transportation</span>
+                     </span>
+                     <span className="expense-right-wrap w-2/6">
+                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
+                     </span>
+                  </li>
+                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
+                     <span className="expense-left-wrap w-4/6">
+                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
+                        <span className="expense-type font-medium text-12 leading-16">Vehicle</span>
                      </span>
                      <span className="expense-right-wrap w-2/6">
                         <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
@@ -237,7 +408,7 @@ export default function Transactions() {
                   <li className="flex flex-wrap items-center justify-between py-2 px-3">
                      <span className="expense-left-wrap w-4/6">
                         <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Car Maintenance</span>
+                        <span className="expense-type font-medium text-12 leading-16">Other</span>
                      </span>
                      <span className="expense-right-wrap w-2/6">
                         <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
@@ -246,6 +417,6 @@ export default function Transactions() {
                </ul>
             </div>
          </div>
-      </Layout>
+      </Layout >
    );
 }

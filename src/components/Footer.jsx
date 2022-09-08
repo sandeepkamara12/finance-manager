@@ -1,11 +1,32 @@
 import AddExpenseIcon from '../assets/images/add-expense-icon.svg';
 import { Link, useLocation } from 'react-router-dom';
+import { useState, useEffect, useCallback } from 'react';
 
 const Footer = () => {
    const location = useLocation();
+   const [amountY, setAmountY] = useState(window.scrollHeight);
+   const [scrollDirection, setScrollDirection] = useState("up");
+
+
+   const handleNavigation = useCallback(() => {
+      if (amountY > window.scrollY) {
+         setScrollDirection("up");
+      }
+      else if (amountY < window.scrollY) {
+         setScrollDirection("down");
+      }
+      setAmountY(window.scrollY)
+   }, [amountY]);
+
+
+
+   useEffect(() => {
+      window.addEventListener("scroll", handleNavigation);
+      return () => { window.removeEventListener("scroll", handleNavigation) };
+   }, [handleNavigation]);
 
    return (
-      <div className="footer fixed left-0 right-0 bottom-0 bg-white flex items-end justify-between pb-5">
+      <div className={`footer fixed left-0 right-0 bottom-0 bg-white flex items-end justify-between pb-5 ${scrollDirection === 'up' ? 'showFooter' : 'hideFooter'}`}>
          <div className={`footer-tab w-1/5 flex items-center justify-center  ${location.pathname === "/home" && "active"}`}>
             <Link to="/home">
                <svg width="20" height="21" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">

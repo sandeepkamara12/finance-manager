@@ -18,7 +18,7 @@
   z-index: 999;
 }
 .ag-chart-wrapper canvas {
-  width: 400px!important;
+  width: 100%!important;
   height: 220px!important;
 }
 .footer {
@@ -26,7 +26,11 @@
   margin: 0 auto;
   height: 70px;
   z-index: 99;
+  transition: all 0.4s ease-in-out;
   /* box-shadow: 0 -2px 2.5px rgb(0 0 0 / 4%); */
+}
+.footer.hideFooter {
+  bottom: -70px;
 }
 .footer .footer-tab.active:not(.user-tab) svg path {
   fill: #6b14d1;
