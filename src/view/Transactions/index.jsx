@@ -3,41 +3,39 @@ import { faAngleLeft, faAngleRight, faAngleUp, faCircleArrowDown } from '@fortaw
 import Layout from '../../Layout';
 import Select from 'react-select';
 import { useState } from 'react';
-
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import { Pie } from 'react-chartjs-2';
-ChartJS.register(ArcElement, Tooltip, Legend);
-const options = {
-   plugins: {
-      legend: {
-         display: false,
-      }
-   },
-};
-export const datas = {
-   labels: ['Other', 'Diesel', 'Vedik', 'Car Maintenance'],
-   datasets: [
-      {
-         label: '# of Votes',
-         data: [58, 20, 12, 10],
-         backgroundColor: [
-            '#989CF2',
-            '#9019B8',
-            '#CA2091',
-            '#6B14D1',
-         ],
-         borderColor: [
-            '#ffffff',
-            '#ffffff',
-            '#ffffff',
-            '#ffffff',
-         ],
-         borderWidth: 1,
-      },
-   ],
-};
+import { AgChartsReact } from "ag-charts-react";
 
 export default function Transactions() {
+
+   const options = {
+      data: [
+         {
+            label: "Car Maintenance",
+            value: 56.9
+         },
+         {
+            label: "Vedik",
+            value: 22.5
+         },
+         {
+            label: "Diesel",
+            value: 6.8
+         },
+         {
+            label: "Other",
+            value: 6.8
+         }
+      ],
+      series: [
+         {
+            type: "pie",
+            angleKey: "value",
+            labelKey: "label",
+            showInLegend: false,
+            // label: 
+         }
+      ]
+   };
 
    const customStyles = {
       option: (styles, state) => ({
@@ -104,8 +102,8 @@ export default function Transactions() {
                </div>
             </div>
             <div className="py-2 flex flex-wrap items-center justify-center fixed w-full pie-wrap shadow-headerShadow bg-white dashboard-header">
-               <div className="w-40 mx-auto">
-                  <Pie data={datas} options={options} />
+               <div className="w-50 mx-auto">
+                  <AgChartsReact options={options} />
                </div>
             </div>
             <div className="expense-listing">

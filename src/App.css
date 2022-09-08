@@ -2,6 +2,10 @@
   max-width: 25.875rem;
   margin: 0 auto;
 }
+#chartContainer {
+  width: 50%;
+  height: 500px;
+}
 * {
   -webkit-tap-highlight-color: transparent;
 }
@@ -12,6 +16,10 @@
   max-width: 25.875rem;
   margin: auto;
   z-index: 999;
+}
+.ag-chart-wrapper canvas {
+  width: 400px!important;
+  height: 220px!important;
 }
 .footer {
   max-width: 25.875rem;
@@ -51,7 +59,7 @@ input[type="date"] {
   padding-bottom: 5rem; 
 }
 .transaction-adjust-scroll {
-  padding-top: 16rem;
+  padding-top: 20rem;
   padding-bottom: 5rem; 
 }
 .pie-wrap {
