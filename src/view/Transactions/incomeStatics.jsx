@@ -13,17 +13,17 @@ export default function IncomeStatics() {
          {
             label: "Upwork",
             value: 50,
-            chartLabel: "Upwork 50"
+            chartLabel: "Upwork 50%"
          },
          {
             label: "Monthly Salary",
             value: 25,
-            chartLabel: "Monthly Salary 50"
+            chartLabel: "Monthly Salary 25%"
          },
          {
             label: "Freelance",
             value: 25,
-            chartLabel: "Freelance 25"
+            chartLabel: "Freelance 25%"
          }
       ],
       series: [
