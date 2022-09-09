@@ -12,22 +12,25 @@ export default function IncomeStatics() {
       data: [
          {
             label: "Upwork",
-            value: 50
+            value: 50,
+            chartLabel: "Upwork 50"
          },
          {
             label: "Monthly Salary",
-            value: 25
+            value: 25,
+            chartLabel: "Monthly Salary 50"
          },
          {
             label: "Freelance",
-            value: 25
+            value: 25,
+            chartLabel: "Freelance 25"
          }
       ],
       series: [
          {
             type: "pie",
             angleKey: "value",
-            labelKey: "label",
+            labelKey: "chartLabel",
             showInLegend: false,
             label: {
                fontSize: 10,

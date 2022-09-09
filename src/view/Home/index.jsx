@@ -46,7 +46,7 @@ export default function Home() {
    return (
       <Layout>
          <div className="mx-auto h-screen relative">
-            <div className="text-black dashboard-adjust-scroll overflow-auto h-full">
+            <div className="text-black dashboard-adjust-scroll h-full">
                <div className="dashboard-header fixed top-0 left-0 right-0 px-5 py-2 bg-white shadow-headerShadow">
                   <div className="flex flex-wrap items-center justify-between">
                      <h4 className='flex items-center justify-between relative w-2/5 text-14'>

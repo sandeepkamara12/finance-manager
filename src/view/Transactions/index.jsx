@@ -10,63 +10,76 @@ export default function Transactions() {
    const options = {
       data: [
          {
-            label: "Communication",
-            value: 5
-         },
-         {
             label: "Electricity",
-            value: 7
+            value: 5,
+            chartLabel: "Electricity 5%"
          },
          {
             label: "Grocery",
-            value: 5
+            value: 5,
+            chartLabel: "Grocery 5%"
          },
          {
             label: "House Rent",
-            value: 5
+            value: 5,
+            chartLabel: "House Rent 5%"
          },
          {
             label: "LPG",
-            value: 5
-         },
-         {
-            label: "Life and Entertainment",
-            value: 5
+            value: 5,
+            chartLabel: "LPG 5%"
          },
          {
             label: "Personal",
-            value: 5
+            value: 4,
+            chartLabel: "Personal 4%"
          },
          {
             label: "Medical",
-            value: 5
+            value: 4,
+            chartLabel: "Medical 4%"
          },
-         {
-            label: "Resaurant",
-            value: 5
-         },
-         {
-            label: "Shopping",
-            value: 5
-         },
-         {
-            label: "Transportation",
-            value: 5
-         },
-         {
-            label: "Vehicle",
-            value: 5
-         },
-         {
-            label: "Other",
-            value: 4
-         }
+         // {
+         //    label: "Communication",
+         //    value: 10,
+         //    chartLabel: "Communication 10%"
+         // },
+         // {
+         //    label: "Life and Entertainment",
+         //    value: 7,
+         //    chartLabel: "Life and Entertainment 7%"
+         // },
+         // {
+         //    label: "Resaurant",
+         //    value: 5,
+         //    chartLabel: "Resaurant 5%"
+         // },
+         // {
+         //    label: "Shopping",
+         //    value: 5,
+         //    chartLabel: "Shopping 5%"
+         // },
+         // {
+         //    label: "Transportation",
+         //    value: 5,
+         //    chartLabel: "Transportation 5%"
+         // },
+         // {
+         //    label: "Vehicle",
+         //    value: 5,
+         //    chartLabel: "Vehicle 5%"
+         // },
+         // {
+         //    label: "Other",
+         //    value: 4,
+         //    chartLabel: "Other 4%"
+         // }
       ],
       series: [
          {
             type: "pie",
             angleKey: "value",
-            labelKey: "label",
+            labelKey: "chartLabel",
             showInLegend: false,
             label: {
                fontSize: 10,
