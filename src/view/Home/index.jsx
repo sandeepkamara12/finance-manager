@@ -224,6 +224,216 @@ export default function Home() {
                   </div>
                   <div className="datewise-expense">
                      <h3 className='flex flex-wrap justify-between py-2 items-center'>
+                        <span className='text-13 text-black leading-18 font-semibold tracking-tight'>Monday, 12 August</span>
+                        <span className='text-13 leading-18 font-semibold text-red tracking-tighter'>₹ 850.00</span>
+                     </h3>
+                     <div className="datewise-total-expense py-1 border-y border-border">
+
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
+                           <div className="expense-left w-4/6 flex flex-wrap">
+                              <div className='w-1/2 text-12 leading-16 text-purple font-semibold pr-2'>Online Shopping</div>
+                              <div className="w-1/2 expense-note-payment-type">
+                                 <span className='font-medium leading-16 text-12 text-black block'>Chair Cover</span>
+                                 <span className='text-12 leading-16 text-textColor block'>Cash</span>
+                              </div>
+                           </div>
+                           <div className="expense-right w-2/6">
+                              <div className='text-12 leading-16 font-semibold text-red tracking-tighter text-right pl-2'>₹  400.00</div>
+                           </div>
+                        </div>
+
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
+                           <div className="expense-left w-4/6 flex flex-wrap">
+                              <div className='w-1/2 text-12 leading-16 text-purple font-semibold pr-2'>Fruits</div>
+                              <div className="w-1/2 expense-note-payment-type">
+                                 <span className='font-medium leading-16 text-12 text-black block'>Fruits</span>
+                                 <span className='text-12 leading-16 text-textColor block'>Cash</span>
+                              </div>
+                           </div>
+                           <div className="expense-right w-2/6">
+                              <div className='text-12 leading-16 font-semibold text-red tracking-tighter text-right pl-2'>₹ 450.00</div>
+                           </div>
+                        </div>
+
+                     </div>
+                  </div>
+                  <div className="datewise-expense">
+                     <h3 className='flex flex-wrap justify-between py-2 items-center'>
+                        <span className='text-13 text-black leading-18 font-semibold tracking-tight'>Monday, 12 August</span>
+                        <span className='text-13 leading-18 font-semibold text-red tracking-tighter'>₹ 850.00</span>
+                     </h3>
+                     <div className="datewise-total-expense py-1 border-y border-border">
+
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
+                           <div className="expense-left w-4/6 flex flex-wrap">
+                              <div className='w-1/2 text-12 leading-16 text-purple font-semibold pr-2'>Online Shopping</div>
+                              <div className="w-1/2 expense-note-payment-type">
+                                 <span className='font-medium leading-16 text-12 text-black block'>Chair Cover</span>
+                                 <span className='text-12 leading-16 text-textColor block'>Cash</span>
+                              </div>
+                           </div>
+                           <div className="expense-right w-2/6">
+                              <div className='text-12 leading-16 font-semibold text-red tracking-tighter text-right pl-2'>₹  400.00</div>
+                           </div>
+                        </div>
+
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
+                           <div className="expense-left w-4/6 flex flex-wrap">
+                              <div className='w-1/2 text-12 leading-16 text-purple font-semibold pr-2'>Fruits</div>
+                              <div className="w-1/2 expense-note-payment-type">
+                                 <span className='font-medium leading-16 text-12 text-black block'>Fruits</span>
+                                 <span className='text-12 leading-16 text-textColor block'>Cash</span>
+                              </div>
+                           </div>
+                           <div className="expense-right w-2/6">
+                              <div className='text-12 leading-16 font-semibold text-red tracking-tighter text-right pl-2'>₹ 450.00</div>
+                           </div>
+                        </div>
+
+                     </div>
+                  </div>
+                  <div className="datewise-expense">
+                     <h3 className='flex flex-wrap justify-between py-2 items-center'>
+                        <span className='text-13 text-black leading-18 font-semibold tracking-tight'>Monday, 12 August</span>
+                        <span className='text-13 leading-18 font-semibold text-red tracking-tighter'>₹ 850.00</span>
+                     </h3>
+                     <div className="datewise-total-expense py-1 border-y border-border">
+
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
+                           <div className="expense-left w-4/6 flex flex-wrap">
+                              <div className='w-1/2 text-12 leading-16 text-purple font-semibold pr-2'>Online Shopping</div>
+                              <div className="w-1/2 expense-note-payment-type">
+                                 <span className='font-medium leading-16 text-12 text-black block'>Chair Cover</span>
+                                 <span className='text-12 leading-16 text-textColor block'>Cash</span>
+                              </div>
+                           </div>
+                           <div className="expense-right w-2/6">
+                              <div className='text-12 leading-16 font-semibold text-red tracking-tighter text-right pl-2'>₹  400.00</div>
+                           </div>
+                        </div>
+
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
+                           <div className="expense-left w-4/6 flex flex-wrap">
+                              <div className='w-1/2 text-12 leading-16 text-purple font-semibold pr-2'>Fruits</div>
+                              <div className="w-1/2 expense-note-payment-type">
+                                 <span className='font-medium leading-16 text-12 text-black block'>Fruits</span>
+                                 <span className='text-12 leading-16 text-textColor block'>Cash</span>
+                              </div>
+                           </div>
+                           <div className="expense-right w-2/6">
+                              <div className='text-12 leading-16 font-semibold text-red tracking-tighter text-right pl-2'>₹ 450.00</div>
+                           </div>
+                        </div>
+
+                     </div>
+                  </div>
+                  <div className="datewise-expense">
+                     <h3 className='flex flex-wrap justify-between py-2 items-center'>
+                        <span className='text-13 text-black leading-18 font-semibold tracking-tight'>Monday, 12 August</span>
+                        <span className='text-13 leading-18 font-semibold text-red tracking-tighter'>₹ 850.00</span>
+                     </h3>
+                     <div className="datewise-total-expense py-1 border-y border-border">
+
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
+                           <div className="expense-left w-4/6 flex flex-wrap">
+                              <div className='w-1/2 text-12 leading-16 text-purple font-semibold pr-2'>Online Shopping</div>
+                              <div className="w-1/2 expense-note-payment-type">
+                                 <span className='font-medium leading-16 text-12 text-black block'>Chair Cover</span>
+                                 <span className='text-12 leading-16 text-textColor block'>Cash</span>
+                              </div>
+                           </div>
+                           <div className="expense-right w-2/6">
+                              <div className='text-12 leading-16 font-semibold text-red tracking-tighter text-right pl-2'>₹  400.00</div>
+                           </div>
+                        </div>
+
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
+                           <div className="expense-left w-4/6 flex flex-wrap">
+                              <div className='w-1/2 text-12 leading-16 text-purple font-semibold pr-2'>Fruits</div>
+                              <div className="w-1/2 expense-note-payment-type">
+                                 <span className='font-medium leading-16 text-12 text-black block'>Fruits</span>
+                                 <span className='text-12 leading-16 text-textColor block'>Cash</span>
+                              </div>
+                           </div>
+                           <div className="expense-right w-2/6">
+                              <div className='text-12 leading-16 font-semibold text-red tracking-tighter text-right pl-2'>₹ 450.00</div>
+                           </div>
+                        </div>
+
+                     </div>
+                  </div>
+                  <div className="datewise-expense">
+                     <h3 className='flex flex-wrap justify-between py-2 items-center'>
+                        <span className='text-13 text-black leading-18 font-semibold tracking-tight'>Monday, 12 August</span>
+                        <span className='text-13 leading-18 font-semibold text-red tracking-tighter'>₹ 850.00</span>
+                     </h3>
+                     <div className="datewise-total-expense py-1 border-y border-border">
+
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
+                           <div className="expense-left w-4/6 flex flex-wrap">
+                              <div className='w-1/2 text-12 leading-16 text-purple font-semibold pr-2'>Online Shopping</div>
+                              <div className="w-1/2 expense-note-payment-type">
+                                 <span className='font-medium leading-16 text-12 text-black block'>Chair Cover</span>
+                                 <span className='text-12 leading-16 text-textColor block'>Cash</span>
+                              </div>
+                           </div>
+                           <div className="expense-right w-2/6">
+                              <div className='text-12 leading-16 font-semibold text-red tracking-tighter text-right pl-2'>₹  400.00</div>
+                           </div>
+                        </div>
+
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
+                           <div className="expense-left w-4/6 flex flex-wrap">
+                              <div className='w-1/2 text-12 leading-16 text-purple font-semibold pr-2'>Fruits</div>
+                              <div className="w-1/2 expense-note-payment-type">
+                                 <span className='font-medium leading-16 text-12 text-black block'>Fruits</span>
+                                 <span className='text-12 leading-16 text-textColor block'>Cash</span>
+                              </div>
+                           </div>
+                           <div className="expense-right w-2/6">
+                              <div className='text-12 leading-16 font-semibold text-red tracking-tighter text-right pl-2'>₹ 450.00</div>
+                           </div>
+                        </div>
+
+                     </div>
+                  </div>
+                  <div className="datewise-expense">
+                     <h3 className='flex flex-wrap justify-between py-2 items-center'>
+                        <span className='text-13 text-black leading-18 font-semibold tracking-tight'>Monday, 12 August</span>
+                        <span className='text-13 leading-18 font-semibold text-red tracking-tighter'>₹ 850.00</span>
+                     </h3>
+                     <div className="datewise-total-expense py-1 border-y border-border">
+
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
+                           <div className="expense-left w-4/6 flex flex-wrap">
+                              <div className='w-1/2 text-12 leading-16 text-purple font-semibold pr-2'>Online Shopping</div>
+                              <div className="w-1/2 expense-note-payment-type">
+                                 <span className='font-medium leading-16 text-12 text-black block'>Chair Cover</span>
+                                 <span className='text-12 leading-16 text-textColor block'>Cash</span>
+                              </div>
+                           </div>
+                           <div className="expense-right w-2/6">
+                              <div className='text-12 leading-16 font-semibold text-red tracking-tighter text-right pl-2'>₹  400.00</div>
+                           </div>
+                        </div>
+
+                        <div className="daywise-expense flex flex-wrap justify-between py-1">
+                           <div className="expense-left w-4/6 flex flex-wrap">
+                              <div className='w-1/2 text-12 leading-16 text-purple font-semibold pr-2'>Fruits</div>
+                              <div className="w-1/2 expense-note-payment-type">
+                                 <span className='font-medium leading-16 text-12 text-black block'>Fruits</span>
+                                 <span className='text-12 leading-16 text-textColor block'>Cash</span>
+                              </div>
+                           </div>
+                           <div className="expense-right w-2/6">
+                              <div className='text-12 leading-16 font-semibold text-red tracking-tighter text-right pl-2'>₹ 450.00</div>
+                           </div>
+                        </div>
+
+                     </div>
+                  </div>
+                  <div className="datewise-expense">
+                     <h3 className='flex flex-wrap justify-between py-2 items-center'>
                         <span className='text-13 text-black leading-18 font-semibold tracking-tight'>Monday, 22 August</span>
                         <span className='text-13 leading-18 font-semibold text-red tracking-tighter'>₹ 2400.00</span>
                      </h3>
