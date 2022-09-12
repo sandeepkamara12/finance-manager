@@ -1,10 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleLeft, faAngleRight, faAngleUp } from '@fortawesome/free-solid-svg-icons'
+import { faCalendar } from '@fortawesome/free-solid-svg-icons'
 import Layout from '../../Layout';
 import Select from 'react-select';
 import { useState } from 'react';
+import DatePicker from 'react-date-picker';
+import moment from 'moment';
 
 export default function Home() {
+   const [value, onChange] = useState(new Date());
+
    const customStyles = {
       option: (styles, state) => ({
          ...styles,
@@ -49,8 +53,9 @@ export default function Home() {
             <div className="text-black dashboard-adjust-scroll h-full">
                <div className="dashboard-header fixed top-0 left-0 right-0 px-5 py-2 bg-white shadow-headerShadow">
                   <div className="flex flex-wrap items-center justify-between">
-                     <h4 className='flex items-center justify-between relative w-2/5 text-14'>
-                        <FontAwesomeIcon icon={faAngleLeft} size="lg" />Aug 2022<FontAwesomeIcon icon={faAngleRight} size="lg" />
+                     <h4 className='flex items-center relative w-2/5 text-12 font-semibold'>
+                        <DatePicker onChange={onChange} value={value} calendarIcon={<FontAwesomeIcon icon={faCalendar} size="lg" />} clearIcon={null} />
+                        <span className="">{moment(value).format("MMM Do YYYY")}</span>
                      </h4>
                      <div className='flex items-center justify-end relative w-3/5'>
                         <div className='w-2/3 inline-block'>

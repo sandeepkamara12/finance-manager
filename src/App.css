@@ -19,7 +19,7 @@
 }
 .ag-chart-wrapper canvas {
   width: 100%!important;
-  height: 220px!important;
+  height: 10rem!important;
 }
 .footer {
   max-width: 25.875rem;
@@ -111,3 +111,11 @@ input[type="date"] {
 .remove-category-modal {
   background-color: rgba(0,0,0,0.2);
 }
+
+/* Datepicker */
+.react-date-picker .react-date-picker__wrapper {
+  border: none;
+}
+.react-date-picker .react-date-picker__wrapper .react-date-picker__inputGroup {display: none;}
+.react-date-picker .react-date-picker__wrapper .react-date-picker__inputGroup ~ .react-date-picker__calendar-button {padding: 0; margin: -3px 3px 0 0;}
+.react-date-picker .react-date-picker__wrapper .react-date-picker__inputGroup ~ .react-date-picker__calendar-button svg path {fill: rgba(107,20,209,1);}

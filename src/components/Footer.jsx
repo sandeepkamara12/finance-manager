@@ -4,9 +4,8 @@ import { useState, useEffect, useCallback } from 'react';
 
 const Footer = () => {
    const location = useLocation();
-   const [amountY, setAmountY] = useState(window.scrollHeight);
+   const [amountY, setAmountY] = useState(window.scrollHeight || 0);
    const [scrollDirection, setScrollDirection] = useState("up");
-
 
    const handleNavigation = useCallback(() => {
       if (amountY > window.scrollY) {
