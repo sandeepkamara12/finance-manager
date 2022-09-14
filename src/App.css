@@ -127,10 +127,10 @@ input[type="date"] {
 .react-date-picker__calendar {width: 250px!important;}
 .react-calendar__navigation {margin-bottom: 0;}
 .react-calendar__navigation button.react-calendar__navigation__arrow {min-width: 24px!important; font-size: 0;}
-.react-calendar__navigation button.react-calendar__navigation__prev-button,
-.react-calendar__navigation button.react-calendar__navigation__next-button,
 .react-calendar__navigation button.react-calendar__navigation__next2-button,
-.react-calendar__navigation button.react-calendar__navigation__prev2-button {
+.react-calendar__navigation button.react-calendar__navigation__prev2-button {display: none;}
+.react-calendar__navigation button.react-calendar__navigation__prev-button,
+.react-calendar__navigation button.react-calendar__navigation__next-button {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
