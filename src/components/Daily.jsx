@@ -2,13 +2,14 @@ import { DATA } from '../DATA';
 import moment from 'moment';
 
 const Daily = ({ currentMonthYear }) => {
+   let currentMonth = moment(String(currentMonthYear.month).padStart(2, '0')).format("MMMM");
    return (
       <>
          {
             DATA.map((yearly, index) => (
                yearly.year === currentMonthYear.year &&
                yearly.yearlyData.map((monthly, index) => (
-                  monthly.month === currentMonthYear.month &&
+                  monthly.month === currentMonth &&
                   monthly.monthlyData.map((weekly, index) => (
                      weekly.weekData.map((daily, index) => (
                         <div className="datawise-expense" key={index}>

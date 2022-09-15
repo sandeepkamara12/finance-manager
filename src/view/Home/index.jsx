@@ -9,42 +9,72 @@ import Yearly from '../../components/Yearly';
 import DatePicker from 'react-date-picker';
 import Select from 'react-select';
 import moment from 'moment';
-import { NavLink } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function Home() {
+   const maxDate = new Date();
+
    const [value, onChange] = useState(new Date());
    const [startDate, setStartDate] = useState(new Date("01-01-2020"));
 
-   //Show the default daily data values using current month and year
-   let today = new Date();
-   let currentMonth = moment(String(today.getMonth() + 1).padStart(2, '0')).format("MMMM");
-   let currentYear = today.getFullYear();
+   const minMonth = startDate.getMonth() + 1;
+   const minYear = startDate.getFullYear();
+
+   const maxMonth = maxDate.getMonth() + 1;
+   const maxYear = maxDate.getFullYear();
+
+   let currentMonth = value.getMonth() + 1;
+   let currentYear = value.getFullYear();
    let [monthYear, setMonthYear] = useState({ "month": currentMonth, "year": currentYear });
 
-   const displayMonth = moment(String(value.getMonth() + 1).padStart(2, '0')).format("MMM");
-   let displayYear = value.getFullYear();
-
-   let [minMonthYear, setMinMonthYear] = useState({ "minMonth": startDate.getMonth() + 1, "minYear": startDate.getFullYear(), "maxMonth": today.getMonth(), "maxYear": currentYear });
-   let [maxMonthYear, setMaxMonthYear] = useState({ "minMonth": startDate.getMonth() + 1, "minYear": startDate.getFullYear(), "maxMonth": today.getMonth() + 1, "maxYear": currentYear });
-
    const onChangeDatePicker = (date) => {
+      //Selected date via datepicker
       const d = new Date(date);
 
       // Update the date via date picker
-      let currentMonth = moment(String(d.getMonth() + 1).padStart(2, '0')).format("MMMM");
       let currentMonthDigit = d.getMonth() + 1;
       let currentYears = d.getFullYear();
-      setMinMonthYear({ "minMonth": currentMonthDigit, "minYear": currentYears, "maxMonth": today.getMonth(), "maxYear": currentYear });
-      setMonthYear({ month: currentMonth, year: currentYears });
-
-      setMaxMonthYear({ "minMonth": startDate.getMonth() + 1, "minYear": startDate.getFullYear(), "maxMonth": currentMonthDigit, "maxYear": currentYears });
-      // console.log('aa', maxMonthYear, currentMonthDigit, currentYears);
+      setMonthYear({ "month": currentMonthDigit, "year": currentYears });
       onChange(d);
+   }
 
+   const nextMonths = min => {
+      if (min.year !== maxYear) {
+         if (min.month !== 12) {
+            setMonthYear({ "month": min.month + 1, "year": min.year });
+         }
+         else {
+            setMonthYear({ "month": 1, "year": min.year + 1 });
+         }
+      }
+      else {
+         if (min.month < maxMonth) {
+            setMonthYear({ "month": min.month + 1, "year": min.year });
+         }
+      }
+   }
+   const prevMonths = min => {
+      console.log("min", min);
+      if (min.year > minYear) {
+         if (min.month !== 1) {
+            let monthLess = min.month - 1;
+            setMonthYear({ month: monthLess, year: min.year });
+         }
+         else {
+            let moreMonth = min.month + 11;
+            let lessYear = min.year - 1;
+            setMonthYear({ month: moreMonth, year: lessYear });
+         }
+      }
+      else {
+         if (min.month > minMonth) {
+            let lessMonth = min.month === 1 ? 1 : min.month - 1;
+            setMonthYear({ month: lessMonth, year: min.year });
+         }
+      }
    }
 
    const customStyles = {
@@ -80,56 +110,12 @@ export default function Home() {
    ];
 
    const [selectedValue, setSelectedValue] = useState("daily");
-
    const handleChange = e => {
       setSelectedValue(e.value);
    }
 
-   const nextMonths = min => {
-      console.log("hello");
-      if (min.minYear !== min.maxYear) {
-         if (min.minMonth !== 12) {
-            let month = moment(String(min.minMonth + 1).padStart(2, '0')).format("MMMM");
-            setMinMonthYear({ "minMonth": min.minMonth + 1, "minYear": min.minYear, "maxMonth": min.maxMonth, "maxYear": min.maxYear });
-            setMonthYear({ "month": month, "year": min.minYear });
-         }
-         else {
-            let month = moment(String(1).padStart(2, '0')).format("MMMM");
-            setMinMonthYear({ "minMonth": 1, "minYear": min.minYear + 1, "maxMonth": min.maxMonth, "maxYear": min.maxYear });
-            setMonthYear({ "month": month, "year": min.minYear + 1 });
-         }
-      }
-      else {
-         if (min.minMonth <= min.maxMonth) {
-            let month = moment(String(min.minMonth + 1).padStart(2, '0')).format("MMMM");
-            setMinMonthYear({ "minMonth": min.minMonth + 1, "minYear": min.minYear, "maxMonth": min.maxMonth, "maxYear": min.maxYear });
-            setMonthYear({ "month": month, "year": min.minYear });
-         }
-      }
-   }
-   const prevMonths = min => {
-      console.log("bye");
-      if (min.maxYear > min.minYear) {
-         if (min.maxMonth !== 1) {
-            let monthLess = min.maxMonth - 1;
-            setMaxMonthYear({ "minMonth": min.minMonth, "minYear": min.minYear, "maxMonth": monthLess, "maxYear": min.maxYear });
-            setMonthYear({ month: moment(String(monthLess).padStart(2, '0')).format("MMMM"), year: min.maxYear });
-         }
-         else {
-            let moreMonth = min.maxMonth + 11;
-            let lessYear = min.maxYear - 1;
-            setMaxMonthYear({ "minMonth": min.minMonth, "minYear": min.minYear, "maxMonth": moreMonth, "maxYear": lessYear });
-            setMonthYear({ month: moment(String(moreMonth).padStart(2, '0')).format("MMMM"), year: lessYear });
-         }
-      }
-      else {
-         if (min.maxMonth >= min.minMonth) {
-            let lessMonth = min.maxMonth - 1;
-            setMaxMonthYear({ "minMonth": min.minMonth, "minYear": min.minYear, "maxMonth": lessMonth, "maxYear": min.maxYear });
-            setMonthYear({ month: moment(String(lessMonth).padStart(2, '0')).format("MMMM"), year: min.maxYear });
-         }
-      }
-   }
+
+   let printMonth = moment(String(monthYear.month).padStart(2, '0')).format("MMM");
 
    return (
       <Layout>
@@ -139,14 +125,16 @@ export default function Home() {
                   <div className="flex flex-wrap items-center justify-between">
 
                      <h4 className='flex items-center justify-between relative w-2/5 text-14'>
-                        <FontAwesomeIcon icon={faAngleLeft} size="lg" disabled={displayYear >= currentYear} onClick={() => prevMonths(maxMonthYear)} />
-                        <span className="">
-                           <DatePicker onChange={onChangeDatePicker} value={value} minDate={startDate} maxDetail="year" maxDate={new Date()}
-                              calendarIcon={<FontAwesomeIcon icon={faCalendar} size="lg" />} clearIcon={null} />
-                           {monthYear.month}
-                        </span>
+                        <button type="button" disabled={monthYear.month === minMonth && monthYear.year === minYear} onClick={() => prevMonths(monthYear)} className="date-button"><FontAwesomeIcon icon={faAngleLeft} size="lg" /></button>
+                        {selectedValue !== 'annually' && (
+                           <span className="relative">
+                              <DatePicker onChange={onChangeDatePicker} value={value} minDate={startDate} maxDetail="year" maxDate={new Date()}
+                                 calendarIcon={<FontAwesomeIcon icon={faCalendar} size="lg" />} clearIcon={null} />
+                              {printMonth}
+                           </span>
+                        )}
                         <span>{monthYear.year}</span>
-                        <div disabled={displayYear <= Date.now()} onClick={() => nextMonths(minMonthYear)}><FontAwesomeIcon icon={faAngleRight} size="lg" /></div>
+                        <button type="button" disabled={monthYear.month === maxMonth && monthYear.year === maxYear} onClick={() => nextMonths(monthYear)} className="date-button"><FontAwesomeIcon icon={faAngleRight} size="lg" /></button>
                      </h4>
                      <div className='flex items-center justify-end relative w-3/5'>
                         <div className='w-2/3 inline-block'>
