@@ -84,7 +84,7 @@ const CategoryListing = () => {
             <div className="dashboard-header add-category fixed bg-white left-0 right-0 shadow-footerShadow">
                <div className="expense-header border-y border-border">
                   <h1 className='uppercase font-semibold text-black text-14 leading-20 flex flex-wrap items-center justify-center'>
-                     + Add
+                     <NavLink to="/add-category" className="flex flex-wrap items-center justify-center add-category font-normal">+ Add</NavLink>
                   </h1>
                </div>
             </div>
