@@ -48,6 +48,7 @@ module.exports = {
       tabColor: '#A19F9F',
     },
     fontSize: {
+      "11": ["0.688rem"],
       "12": ["0.75rem"],
       "13": ["0.813rem"],
       "14": ["0.875rem"],
@@ -90,6 +91,7 @@ module.exports = {
       'dashboardCard': '0 25px 40px -25px #9da1f3',
       'plusIconShadow': '0 10px 40px -10px #1f615c',
       'headerShadow': '0 5px 15px -13px #1f615c',
+      'footerShadow': '0 -5px 15px -13px #1f615c',
       'shadow-none': '10px 10px 10px 10px red'
     }
   },

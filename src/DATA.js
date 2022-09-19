@@ -8,7 +8,7 @@ const DATA = [
             "monthlyAmount": 3350,
             "monthlyData": [
                {
-                  "week": 0,
+                  "week": { "week": 0, "weekStartDate": "08-29-2022", "weekEndDate": "09-04-2022" },
                   "weeklyAmount": 2250,
                   "weekData": [
                      {
@@ -47,7 +47,7 @@ const DATA = [
                   ]
                },
                {
-                  "week": 1,
+                  "week": { "week": 1, "weekStartDate": "09-05-2022", "weekEndDate": "09-11-2022" },
                   "weeklyAmount": 1100,
                   "weekData": [
                      {
@@ -112,7 +112,7 @@ const DATA = [
             "monthlyAmount": 32250,
             "monthlyData": [
                {
-                  "week": 3,
+                  "week": { "week": 2, "weekStartDate": "08-15-2022", "weekEndDate": "08-21-2022" },
                   "weeklyAmount": 27250,
                   "weekData": [
                      {
@@ -136,7 +136,7 @@ const DATA = [
                         ]
                      },
                      {
-                        "date": "08-02-2022",
+                        "date": "08-20-2022",
                         "dailyAmount": 25000,
                         "dailyData": [
                            {
@@ -151,11 +151,11 @@ const DATA = [
                   ]
                },
                {
-                  "week": 4,
+                  "week": { "week": 4, "weekStartDate": "08-22-2022", "weekEndDate": "08-28-2022" },
                   "weeklyAmount": 5000,
                   "weekData": [
                      {
-                        "date": "25-07-2022",
+                        "date": "08-25-2022",
                         "dailyAmount": 5000,
                         "dailyData": [
                            {
@@ -182,11 +182,11 @@ const DATA = [
             "monthlyAmount": 3000,
             "monthlyData": [
                {
-                  "week": 0,
+                  "week": { "week": 0, "weekStartDate": "08-30-2021", "weekEndDate": "09-05-2021" },
                   "weeklyAmount": 2000,
                   "weekData": [
                      {
-                        "date": "09-01-2022",
+                        "date": "09-01-2021",
                         "dailyAmount": 1000,
                         "dailyData": [
                            {
@@ -199,7 +199,7 @@ const DATA = [
                         ]
                      },
                      {
-                        "date": "09-02-2022",
+                        "date": "09-02-2021",
                         "dailyAmount": 1000,
                         "dailyData": [
                            {
@@ -221,11 +221,11 @@ const DATA = [
                   ]
                },
                {
-                  "week": 1,
+                  "week": { "week": 1, "weekStartDate": "09-06-2021", "weekEndDate": "09-12-2021" },
                   "weeklyAmount": 1000,
                   "weekData": [
                      {
-                        "date": "09-07-2022",
+                        "date": "09-07-2021",
                         "dailyAmount": 500,
                         "dailyData": [
                            {
@@ -238,7 +238,7 @@ const DATA = [
                         ]
                      },
                      {
-                        "date": "09-08-2022",
+                        "date": "09-08-2021",
                         "dailyAmount": 500,
                         "dailyData": [
                            {
@@ -266,11 +266,11 @@ const DATA = [
             "monthlyAmount": 27000,
             "monthlyData": [
                {
-                  "week": 3,
+                  "week": { "week": 3, "weekStartDate": "08-16-2021", "weekEndDate": "08-22-2021" },
                   "weeklyAmount": 25000,
                   "weekData": [
                      {
-                        "date": "08-18-2022",
+                        "date": "08-18-2021",
                         "dailyAmount": 15000,
                         "dailyData": [
                            {
@@ -290,7 +290,7 @@ const DATA = [
                         ]
                      },
                      {
-                        "date": "08-02-2022",
+                        "date": "08-20-2021",
                         "dailyAmount": 10000,
                         "dailyData": [
                            {
@@ -305,11 +305,11 @@ const DATA = [
                   ]
                },
                {
-                  "week": 4,
+                  "week": { "week": 4, "weekStartDate": "08-23-2021", "weekEndDate": "08-29-2021" },
                   "weeklyAmount": 2000,
                   "weekData": [
                      {
-                        "date": "25-07-2022",
+                        "date": "08-25-2021",
                         "dailyAmount": 2000,
                         "dailyData": [
                            {

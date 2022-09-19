@@ -85,6 +85,8 @@ export default function Transactions() {
             angleKey: "value",
             labelKey: "chartLabel",
             showInLegend: false,
+            strokeWidth: 1,
+            strokes: ['#ffffff'],
             label: {
                fontSize: 10,
                fontWeight: '500',

@@ -45,9 +45,9 @@ const CategoryListing = () => {
             <div className="h-screen adjust-scrollbar overflow-auto  bg-white">
                <div className="dashboard-header fixed top-0 bg-white left-0 right-0 shadow-headerShadow">
                   <div className="expense-header border-b border-border">
-                     <h1 className='uppercase font-semibold text-black text-14 leading-20 flex flex-wrap items-center justify-between'>
+                     <h1 className='uppercase font-semibold text-black text-14 leading-20 flex flex-wrap items-center justify-center'>
                         <span>expense category</span>
-                        <NavLink to="/add-category" className="flex flex-wrap items-center justify-center add-category bg-income-gradient rounded-full text-white w-6 h-6 font-normal">+</NavLink>
+                        {/* <NavLink to="/add-category" className="flex flex-wrap items-center justify-center add-category bg-income-gradient rounded-full text-white w-6 h-6 font-normal">+</NavLink> */}
                      </h1>
                   </div>
                </div>
@@ -81,6 +81,13 @@ const CategoryListing = () => {
                   </div>
                </div>
             }
+            <div className="dashboard-header add-category fixed bg-white left-0 right-0 shadow-footerShadow">
+               <div className="expense-header border-y border-border">
+                  <h1 className='uppercase font-semibold text-black text-14 leading-20 flex flex-wrap items-center justify-center'>
+                     + Add
+                  </h1>
+               </div>
+            </div>
          </Layout>
       </>
    );

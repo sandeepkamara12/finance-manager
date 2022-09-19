@@ -16,6 +16,7 @@ import { faCalendar, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-s
 
 export default function Home() {
    const maxDate = new Date();
+   const [selectedValue, setSelectedValue] = useState("daily");
 
    const [value, onChange] = useState(new Date());
    const [startDate, setStartDate] = useState(new Date("01-01-2020"));
@@ -43,11 +44,16 @@ export default function Home() {
 
    const nextMonths = min => {
       if (min.year !== maxYear) {
-         if (min.month !== 12) {
-            setMonthYear({ "month": min.month + 1, "year": min.year });
+         if (selectedValue == 'annually') {
+            setMonthYear({ month: min.month, year: min.year + 1 });
          }
          else {
-            setMonthYear({ "month": 1, "year": min.year + 1 });
+            if (min.month !== 12) {
+               setMonthYear({ "month": min.month + 1, "year": min.year });
+            }
+            else {
+               setMonthYear({ "month": 1, "year": min.year + 1 });
+            }
          }
       }
       else {
@@ -57,22 +63,33 @@ export default function Home() {
       }
    }
    const prevMonths = min => {
-      console.log("min", min);
       if (min.year > minYear) {
-         if (min.month !== 1) {
-            let monthLess = min.month - 1;
-            setMonthYear({ month: monthLess, year: min.year });
+         if (selectedValue == 'annually') {
+            setMonthYear({ month: min.month, year: min.year - 1 });
          }
          else {
-            let moreMonth = min.month + 11;
-            let lessYear = min.year - 1;
-            setMonthYear({ month: moreMonth, year: lessYear });
+            if (min.month !== 1) {
+               let monthLess = min.month - 1;
+               setMonthYear({ month: monthLess, year: min.year });
+            }
+            else {
+               let moreMonth = min.month + 11;
+               let lessYear = min.year - 1;
+               setMonthYear({ month: moreMonth, year: lessYear });
+            }
          }
       }
       else {
-         if (min.month > minMonth) {
-            let lessMonth = min.month === 1 ? 1 : min.month - 1;
-            setMonthYear({ month: lessMonth, year: min.year });
+         if (selectedValue == 'annually') {
+            if (min.year == minYear) {
+               setMonthYear({ month: min.month, year: min.year });
+            }
+         }
+         else {
+            if (min.month > minMonth) {
+               let lessMonth = min.month === 1 ? 1 : min.month - 1;
+               setMonthYear({ month: lessMonth, year: min.year });
+            }
          }
       }
    }
@@ -109,7 +126,6 @@ export default function Home() {
       { value: 'annually', label: 'Annually' }
    ];
 
-   const [selectedValue, setSelectedValue] = useState("daily");
    const handleChange = e => {
       setSelectedValue(e.value);
    }
@@ -124,10 +140,12 @@ export default function Home() {
                <div className="dashboard-header fixed top-0 left-0 right-0 px-5 py-2 bg-white shadow-headerShadow">
                   <div className="flex flex-wrap items-center justify-between">
 
-                     <h4 className='flex items-center justify-between relative w-2/5 text-14'>
-                        <button type="button" disabled={monthYear.month === minMonth && monthYear.year === minYear} onClick={() => prevMonths(monthYear)} className="date-button"><FontAwesomeIcon icon={faAngleLeft} size="lg" /></button>
+                     <h4 className='flex items-center justify-between relative w-3/12 text-14'>
+                        {
+                           < button type="button" disabled={(selectedValue === 'annually') ? (monthYear.year === minYear) ? 'disabled' : '' : (monthYear.month === minMonth) && (monthYear.year === minYear) ? 'disabled' : ''} onClick={() => prevMonths(monthYear)} className="date-button"><FontAwesomeIcon icon={faAngleLeft} size="lg" /></button>
+                        }
                         {selectedValue !== 'annually' && (
-                           <span className="relative">
+                           <span className='relative'>
                               <DatePicker onChange={onChangeDatePicker} value={value} minDate={startDate} maxDetail="year" maxDate={new Date()}
                                  calendarIcon={<FontAwesomeIcon icon={faCalendar} size="lg" />} clearIcon={null} />
                               {printMonth}
@@ -136,7 +154,7 @@ export default function Home() {
                         <span>{monthYear.year}</span>
                         <button type="button" disabled={monthYear.month === maxMonth && monthYear.year === maxYear} onClick={() => nextMonths(monthYear)} className="date-button"><FontAwesomeIcon icon={faAngleRight} size="lg" /></button>
                      </h4>
-                     <div className='flex items-center justify-end relative w-3/5'>
+                     <div className='flex items-center justify-end relative w-9/12'>
                         <div className='w-2/3 inline-block'>
                            <Select value={data.filter(obj => obj.value === selectedValue)} isSearchable={false} styles={customStyles} onChange={handleChange} options={data} name="paymentType" id="paymentType" className='text-12 leading-16 text-black font-medium w-full' />
                         </div>
@@ -166,6 +184,6 @@ export default function Home() {
 
             </div>
          </div>
-      </Layout>
+      </Layout >
    );
 }

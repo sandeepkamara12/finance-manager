@@ -57,7 +57,9 @@ input[type="date"] {
   padding-top: 10rem;
   padding-bottom: 7.813rem;
 } */
-
+.add-category {
+  bottom: 75px;
+}
 .dashboard-adjust-scroll {
   padding-top: 6rem;
   padding-bottom: 5rem; 
@@ -69,11 +71,11 @@ input[type="date"] {
 .pie-wrap {
   top: 5rem;
 }
-.category-wrap .category:nth-child(odd) {
-  padding-right: 0.25rem;
+.category-wrap .category:nth-child(3n+1) {
+  padding-right: 0.5rem;
 }
-.category-wrap .category:nth-child(even) {
-  padding-left: 0.25rem;
+.category-wrap .category:nth-child(3n) {
+  padding-left: 0.5rem;
 }
 .category-wrap .category > div {
   min-height: 70px;
