@@ -138,7 +138,7 @@ export default function Transactions() {
       <Layout>
          <div className="bg-white transaction-adjust-scroll">
             <div className="dashboard-header fixed top-0 left-0 right-0 pt-2 bg-white border-b border-border">
-               <div className="flex flex-wrap items-center justify-between">
+               <div className="flex flex-wrap items-center justify-between px-5">
                   <h4 className='flex items-center justify-between relative w-3/12 text-14'>
                      <button type="button" className="date-button"><FontAwesomeIcon icon={faAngleLeft} size="lg" /></button>
                      <span className='relative'>
