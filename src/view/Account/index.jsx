@@ -19,7 +19,7 @@ export default function Account() {
 
                <div className="category-wrap flex items-stretch justify-center flex-wrap px-5">
                   <div className="category w-1/3 flex flex-wrap items-center justify-center flex-column text-center pb-2">
-                     <div className="bg-profile-gradient w-full rounded py-3 flex flex-wrap items-center justify-center flex-column px-2">
+                     <div className="bg-profile-gradient w-full rounded py-3 flex flex-wrap items-center justify-center flex-column px-2 h-full">
                         <figure className='w-full'>
                            <NavLink to="/home">
                               <img src={AccountProfile} alt="Profile" className='mx-auto w-6' style={{ "height": "24px" }} />
@@ -33,7 +33,7 @@ export default function Account() {
                      </div>
                   </div>
                   <div className="category w-1/3 flex flex-wrap items-center justify-center flex-column text-center pb-2">
-                     <div className="bg-income-gradient w-full rounded py-3 flex flex-wrap items-center justify-center flex-column px-2">
+                     <div className="bg-income-gradient w-full rounded py-3 flex flex-wrap items-center justify-center flex-column px-2 h-full">
                         <figure className='w-full'>
                            <img src={AccountInExpense} alt="Profile" className='mx-auto w-6' style={{ "height": "24px" }} />
                         </figure>
@@ -41,7 +41,7 @@ export default function Account() {
                      </div>
                   </div>
                   <div className="category w-1/3 flex flex-wrap items-center justify-center flex-column text-center pb-2">
-                     <div className="bg-profile-gradient w-full rounded py-3 flex flex-wrap items-center justify-center flex-column px-2">
+                     <div className="bg-profile-gradient w-full rounded py-3 flex flex-wrap items-center justify-center flex-column px-2 h-full">
                         <figure className='w-full'>
                            <NavLink to="/category-listing">
                               <img src={AccountInExpense} alt="Profile" className='mx-auto w-6' style={{ "height": "24px" }} />
@@ -55,7 +55,7 @@ export default function Account() {
                      </div>
                   </div>
                   <div className="category w-1/3 flex flex-wrap items-center justify-center flex-column text-center pb-2">
-                     <div className="bg-income-gradient w-full rounded py-3 flex flex-wrap items-center justify-center flex-column px-2">
+                     <div className="bg-income-gradient w-full rounded py-3 flex flex-wrap items-center justify-center flex-column px-2 h-full">
                         <figure className='w-full'>
                            <img src={Help} alt="Profile" className='mx-auto w-6' style={{ "height": "24px" }} />
                         </figure>
@@ -63,7 +63,7 @@ export default function Account() {
                      </div>
                   </div>
                   <div className="category w-1/3 flex flex-wrap items-center justify-center flex-column text-center pb-2">
-                     <div className="bg-income-gradient w-full rounded py-3 flex flex-wrap items-center justify-center flex-column px-2">
+                     <div className="bg-income-gradient w-full rounded py-3 flex flex-wrap items-center justify-center flex-column px-2 h-full">
                         <figure className='w-full'>
                            <img src={Share} alt="Profile" className='mx-auto w-6' style={{ "height": "24px" }} />
                         </figure>
@@ -71,7 +71,7 @@ export default function Account() {
                      </div>
                   </div>
                   <div className="category w-1/3 flex flex-wrap items-center justify-center flex-column text-center pb-2">
-                     <div className="bg-income-gradient w-full rounded py-3 flex flex-wrap items-center justify-center flex-column px-2">
+                     <div className="bg-income-gradient w-full rounded py-3 flex flex-wrap items-center justify-center flex-column px-2 h-full">
                         <figure className='w-full'>
                            <img src={Excel} alt="Export as Excel" className='mx-auto w-6' style={{ "height": "24px" }} />
                         </figure>
