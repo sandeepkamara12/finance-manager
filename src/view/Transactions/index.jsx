@@ -6,10 +6,9 @@ import { useState } from 'react';
 import { AgChartsReact } from "ag-charts-react";
 import { NavLink } from 'react-router-dom';
 import DatePicker from 'react-date-picker';
-import moment from 'moment';
-
+import { CATEGORY } from '../../DATA';
 export default function Transactions() {
-   const [value, onChange] = useState(new Date());
+   const [selectedValue, setSelectedValue] = useState("daily");
 
    const options = {
       data: [
@@ -123,31 +122,33 @@ export default function Transactions() {
    }
 
    const data = [
-      { value: 'day', label: 'Day' },
-      { value: 'week', label: 'Week' },
-      { value: 'monthly', label: 'Monthly' },
+      { value: 'daily', label: 'Day' },
+      { value: 'weekly', label: 'Week' },
+      // { value: 'monthly', label: 'Monthly' },
       { value: 'annually', label: 'Annually' }
    ];
 
-   const [selectedValue, setSelectedValue] = useState("day");
 
    const handleChange = e => {
       setSelectedValue(e.value);
    }
 
+
    return (
       <Layout>
          <div className="bg-white transaction-adjust-scroll">
             <div className="dashboard-header fixed top-0 left-0 right-0 pt-2 bg-white border-b border-border">
-               <div className="flex flex-wrap items-center justify-between px-5">
-                  {/* <h4 className='flex items-center relative w-2/5 text-12 font-semibold'>
-                     <DatePicker onChange={onChange} value={value} calendarIcon={<FontAwesomeIcon icon={faCalendar} size="lg" />} clearIcon={null} />
-                     <span className="">{moment(value).format("MMM Do YYYY")}</span>
-                  </h4> */}
-                  <h4 className='flex items-center justify-between relative w-2/5 text-14'>
-                     <FontAwesomeIcon icon={faAngleLeft} size="lg" />Aug 2022<FontAwesomeIcon icon={faAngleRight} size="lg" />
+               <div className="flex flex-wrap items-center justify-between">
+                  <h4 className='flex items-center justify-between relative w-3/12 text-14'>
+                     <button type="button" className="date-button"><FontAwesomeIcon icon={faAngleLeft} size="lg" /></button>
+                     <span className='relative'>
+                        <DatePicker maxDetail="year" calendarIcon={<FontAwesomeIcon icon={faCalendar} size="lg" />} clearIcon={null} />
+                        Sep
+                     </span>
+                     <span>2022</span>
+                     <button type="button" className="date-button"><FontAwesomeIcon icon={faAngleRight} size="lg" /></button>
                   </h4>
-                  <div className='flex items-center justify-end relative w-3/5'>
+                  <div className='flex items-center justify-end relative w-9/12'>
                      <div className='w-2/3 inline-block'>
                         <Select value={data.filter(obj => obj.value === selectedValue)} isSearchable={false} styles={customStyles} onChange={handleChange} options={data} name="paymentType" id="paymentType" className='text-12 leading-16 text-black font-medium w-full' />
                      </div>
@@ -175,268 +176,19 @@ export default function Transactions() {
             </div>
             <div className="expense-listing">
                <ul className="expense-list-wrap overflow-auto h-full">
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-other text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Communication</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-diesel text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Electricity</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Grocery</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">House Rent</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-other text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">LPG</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-diesel text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Life and Entertainment</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Personal</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Medical</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-diesel text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Resaurant</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Shopping</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Transportation</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Vehicle</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Other</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  {/* xhbd */}
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Shopping</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Transportation</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Vehicle</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Other</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Shopping</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Transportation</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Vehicle</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Other</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Shopping</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Transportation</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Vehicle</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Other</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Shopping</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Transportation</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-vedik text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Vehicle</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
-                  <li className="flex flex-wrap items-center justify-between py-2 px-3">
-                     <span className="expense-left-wrap w-4/6">
-                        <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-car-maintenance text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">58%</span>
-                        <span className="expense-type font-medium text-12 leading-16">Other</span>
-                     </span>
-                     <span className="expense-right-wrap w-2/6">
-                        <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ 47,890.00</span>
-                     </span>
-                  </li>
+                  {
+                     CATEGORY.map((res, index) => (
+                        <li className="flex flex-wrap items-center justify-between py-2 px-3" key={index}>
+                           <span className="expense-left-wrap w-4/6">
+                              <span className="expense-perentage h-6 w-12 rounded-xs text-12 leading-16 expense-category-other text-white font-semibold inline-flex flex-wrap items-center justify-center mr-2">{res.percentage}%</span>
+                              <span className="expense-type font-medium capitalize text-12 leading-16">{res.category}</span>
+                           </span>
+                           <span className="expense-right-wrap w-2/6">
+                              <span className="expense-amount font-semibold block text-right text-13 leading-16">₹ {res.amount}</span>
+                           </span>
+                        </li>
+                     ))
+                  }
                </ul>
             </div>
          </div>

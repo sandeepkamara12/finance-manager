@@ -122,7 +122,7 @@ export default function Home() {
    const data = [
       { value: 'daily', label: 'Day' },
       { value: 'weekly', label: 'Week' },
-      { value: 'monthly', label: 'Monthly' },
+      // { value: 'monthly', label: 'Monthly' },
       { value: 'annually', label: 'Annually' }
    ];
 
@@ -142,7 +142,7 @@ export default function Home() {
 
                      <h4 className='flex items-center justify-between relative w-3/12 text-14'>
                         {
-                           < button type="button" disabled={(selectedValue === 'annually') ? (monthYear.year === minYear) ? 'disabled' : '' : (monthYear.month === minMonth) && (monthYear.year === minYear) ? 'disabled' : ''} onClick={() => prevMonths(monthYear)} className="date-button"><FontAwesomeIcon icon={faAngleLeft} size="lg" /></button>
+                           <button type="button" disabled={(selectedValue === 'annually') ? (monthYear.year === minYear) ? 'disabled' : '' : (monthYear.month === minMonth) && (monthYear.year === minYear) ? 'disabled' : ''} onClick={() => prevMonths(monthYear)} className="date-button"><FontAwesomeIcon icon={faAngleLeft} size="lg" /></button>
                         }
                         {selectedValue !== 'annually' && (
                            <span className='relative'>
@@ -178,7 +178,7 @@ export default function Home() {
 
                <div className='expense-listing-wrap px-5'>
                   {
-                     selectedValue === "daily" ? <Daily currentMonthYear={monthYear} /> : selectedValue === "weekly" ? <Weekly currentMonthYear={monthYear} /> : selectedValue === "monthly" ? <Monthly currentMonthYear={monthYear} /> : <Yearly currentMonthYear={monthYear} />
+                     selectedValue === "daily" ? <Daily currentMonthYear={monthYear} /> : selectedValue === "weekly" ? <Weekly currentMonthYear={monthYear} /> : <Yearly currentMonthYear={monthYear} />
                   }
                </div>
 

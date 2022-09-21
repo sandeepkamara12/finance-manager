@@ -18,9 +18,9 @@ const DATA = [
                            {
                               "id": 1,
                               "type": "cash",
-                              "category": 'LPG',
+                              "category": 'lpg',
                               "amount": 1000,
-                              "note": "Pillow with covers.",
+                              "note": "Purchase GAS Cylender",
                            }
                         ]
                      },
@@ -31,15 +31,68 @@ const DATA = [
                            {
                               "id": 1,
                               "type": "cash",
-                              "category": 'LPG',
+                              "category": 'lpg',
                               "amount": 800,
                               "note": "Pillow with covers.",
                            },
                            {
                               "id": 2,
                               "type": "cash",
-                              "category": 'Fruits',
+                              "category": 'fruits',
                               "amount": 450,
+                              "note": "Purchase Oranges and Apples.",
+                           },
+                        ]
+                     },
+                     {
+                        "date": "09-03-2022",
+                        "dailyAmount": 1000,
+                        "dailyData": [
+                           {
+                              "id": 1,
+                              "type": "cash",
+                              "category": 'lpg',
+                              "amount": 1000,
+                              "note": "Purchase GAS Cylender",
+                           }
+                        ]
+                     },
+                     {
+                        "date": "09-04-2022",
+                        "dailyAmount": 1250,
+                        "dailyData": [
+                           {
+                              "id": 1,
+                              "type": "cash",
+                              "category": 'lpg',
+                              "amount": 800,
+                              "note": "Pillow with covers.",
+                           },
+                           {
+                              "id": 2,
+                              "type": "cash",
+                              "category": 'fruits',
+                              "amount": 450,
+                              "note": "Purchase Oranges and Apples.",
+                           },
+                        ]
+                     },
+                     {
+                        "date": "09-07-2022",
+                        "dailyAmount": 12500,
+                        "dailyData": [
+                           {
+                              "id": 1,
+                              "type": "cash",
+                              "category": 'lpg',
+                              "amount": 8000,
+                              "note": "Pillow with covers.",
+                           },
+                           {
+                              "id": 2,
+                              "type": "cash",
+                              "category": 'fruits',
+                              "amount": 4500,
                               "note": "Purchase Oranges and Apples.",
                            },
                         ]
@@ -57,7 +110,7 @@ const DATA = [
                            {
                               "id": 1,
                               "type": "cash",
-                              "category": 'LPG',
+                              "category": 'lpg',
                               "amount": 500,
                               "note": "Pillow with covers.",
                            }
@@ -70,14 +123,14 @@ const DATA = [
                            {
                               "id": 1,
                               "type": "cash",
-                              "category": 'LPG',
+                              "category": 'lpg',
                               "amount": 200,
                               "note": "Pillow with covers.",
                            },
                            {
                               "id": 2,
                               "type": "cash",
-                              "category": 'Fruits',
+                              "category": 'fruits',
                               "amount": 150,
                               "note": "Purchase Oranges and Apples.",
                            },
@@ -90,14 +143,14 @@ const DATA = [
                            {
                               "id": 1,
                               "type": "cash",
-                              "category": 'LPG',
+                              "category": 'lpg',
                               "amount": 100,
                               "note": "Pillow with covers.",
                            },
                            {
                               "id": 2,
                               "type": "cash",
-                              "category": 'Fruits',
+                              "category": 'fruits',
                               "amount": 150,
                               "note": "Purchase Oranges and Apples.",
                            },
@@ -122,14 +175,14 @@ const DATA = [
                            {
                               "id": 1,
                               "type": "cash",
-                              "category": 'LPG',
+                              "category": 'lpg',
                               "amount": 1000,
                               "note": "Pillow with covers.",
                            },
                            {
                               "id": 2,
                               "type": "Debit Card",
-                              "category": 'Fruits',
+                              "category": 'fruits',
                               "amount": 1250,
                               "note": "Purchase Mangoes and Grapes.",
                            }
@@ -142,7 +195,7 @@ const DATA = [
                            {
                               "id": 1,
                               "type": "Debit Card",
-                              "category": 'Bed',
+                              "category": 'fruits',
                               "amount": 25000,
                               "note": "Purchase new bed",
                            },
@@ -161,7 +214,7 @@ const DATA = [
                            {
                               "id": 1,
                               "type": "PayTM",
-                              "category": 'PG Rent',
+                              "category": 'rent',
                               "amount": 5000,
                               "note": "Pay PG Rent",
                            }
@@ -192,7 +245,7 @@ const DATA = [
                            {
                               "id": 1,
                               "type": "cash",
-                              "category": 'LPG',
+                              "category": 'lpg',
                               "amount": 1000,
                               "note": "Pillow with covers.",
                            }
@@ -205,14 +258,14 @@ const DATA = [
                            {
                               "id": 1,
                               "type": "cash",
-                              "category": 'LPG',
+                              "category": 'lpg',
                               "amount": 800,
                               "note": "Pillow with covers.",
                            },
                            {
                               "id": 2,
                               "type": "cash",
-                              "category": 'Fruits',
+                              "category": 'fruits',
                               "amount": 200,
                               "note": "Purchase Oranges and Apples.",
                            },
@@ -231,7 +284,7 @@ const DATA = [
                            {
                               "id": 1,
                               "type": "cash",
-                              "category": 'LPG',
+                              "category": 'lpg',
                               "amount": 500,
                               "note": "Pillow with covers.",
                            }
@@ -244,14 +297,14 @@ const DATA = [
                            {
                               "id": 1,
                               "type": "cash",
-                              "category": 'LPG',
+                              "category": 'lpg',
                               "amount": 250,
                               "note": "Pillow with covers.",
                            },
                            {
                               "id": 2,
                               "type": "cash",
-                              "category": 'Fruits',
+                              "category": 'fruits',
                               "amount": 250,
                               "note": "Purchase Oranges and Apples.",
                            },
@@ -276,14 +329,14 @@ const DATA = [
                            {
                               "id": 1,
                               "type": "cash",
-                              "category": 'LPG',
+                              "category": 'lpg',
                               "amount": 10000,
                               "note": "Pillow with covers.",
                            },
                            {
                               "id": 2,
                               "type": "Debit Card",
-                              "category": 'Fruits',
+                              "category": 'fruits',
                               "amount": 5000,
                               "note": "Purchase Mangoes and Grapes.",
                            }
@@ -296,7 +349,7 @@ const DATA = [
                            {
                               "id": 1,
                               "type": "Debit Card",
-                              "category": 'Bed',
+                              "category": 'bed',
                               "amount": 10000,
                               "note": "Purchase new bed",
                            },
@@ -315,7 +368,7 @@ const DATA = [
                            {
                               "id": 1,
                               "type": "PayTM",
-                              "category": 'PG Rent',
+                              "category": 'rent',
                               "amount": 2000,
                               "note": "Pay PG Rent",
                            }
@@ -327,6 +380,83 @@ const DATA = [
          }
       ]
    },
-]
+];
 
-export { DATA };
+const CATEGORY = [
+   {
+      percentage: '58',
+      category: 'Fruits',
+      amount: 500
+   },
+   {
+      percentage: '58',
+      category: 'Vedik',
+      amount: 300
+   },
+   {
+      percentage: '58',
+      category: 'Medical',
+      amount: 1000
+   },
+   {
+      percentage: '58',
+      category: 'Electricity',
+      amount: 5000
+   },
+   {
+      percentage: '58',
+      category: 'Grocery',
+      amount: 2100
+   },
+   {
+      percentage: '58',
+      category: 'Personal',
+      amount: 1000
+   },
+   {
+      percentage: '58',
+      category: 'LPG',
+      amount: 2000
+   },
+   {
+      percentage: '58',
+      category: 'House Rent',
+      amount: 3200
+   },
+   {
+      percentage: '58',
+      category: 'Communication',
+      amount: 1100
+   },
+   {
+      percentage: '58',
+      category: 'Life & Entertainment',
+      amount: 3000
+   },
+   {
+      percentage: '58',
+      category: 'Restaurant',
+      amount: 1500
+   },
+   {
+      percentage: '58',
+      category: 'Shopping',
+      amount: 5000
+   },
+   {
+      percentage: '58',
+      category: 'Transportation',
+      amount: 1000
+   },
+   {
+      percentage: '58',
+      category: 'Vehicle',
+      amount: 3000
+   },
+   {
+      percentage: '58',
+      category: 'Other',
+      amount: 15000
+   }
+]
+export { DATA, CATEGORY }
